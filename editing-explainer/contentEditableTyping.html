@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+
+    <title>ContentEditableTyping</title>
+    <script async="" class='remove' src=
+    'https://www.w3.org/Tools/respec/respec-w3c-common'></script>
+    <script class='remove'>
+var respecConfig = {
+              specStatus:   "ED"
+          ,   shortName:    "ContentEditable"
+          ,   editors:      [{ name: "Johannes Wilm",
+                               mailto: "johannes@fiduswriter.org",
+                               company: "Invited Expert"},
+                             { name: "Ben Peters",
+                               mailto: "BenjamP@microsoft.com",
+                               company: "Microsoft",
+                               companyURL: "http://www.microsoft.com",
+                               note: "until <time>2015-02-23</time>"},]
+          ,   wg:           "Web Applications Working Group"
+          ,   wgURI:        "http://www.w3.org/2008/webapps/"
+          ,   wgPublicList: "public-webapps"
+	  ,   otherLinks: [{
+                  key: 'Participate',
+                  data: [{
+                      value: 'We are on GitHub.',
+                      href: 'https://github.com/w3c/editing-explainer'
+                  }, {
+                      value: 'File a bug.',
+                      href: 'https://github.com/w3c/editing-explainer/issues'
+                  }, {
+                      value: 'Commit history.',
+                      href: 'https://github.com/w3c/editing-explainer/commits/gh-pages'
+                  }, {
+                      value: 'Mailing list.',
+                      href: 'http://lists.w3.org/Archives/Public/public-webapps/'
+                  }]
+              }]
+          ,   wgPatentURI:  "http://www.w3.org/2004/01/pp-impl/40318/status"
+          ,   edDraftURI:   "http://w3c.github.io/editing-explainer/contentEditableTyping.html"
+        };
+    </script>
+</head>
+
+<body>
+    <section id='abstract'>
+        <p>This specification defines the expected behaviors for for elements
+        with the contenteditable attribute set to typing. This specification
+        builds on HTML5.</p>
+    </section>
+
+    <section id='sotd'>
+        <p></p>
+    </section>
+
+    <section>
+        <h2>Problem and Use Cases</h2>The problems solved by and use cases for
+        this document by this document are tracked in the <a href=
+        "http://w3c.github.io/editing-explainer/">Editing Explainer</a>
+        document.
+    </section>
+
+    <section>
+        <h2 id="terms">Terminology</h2>
+
+        <dl>
+            <dt><dfn>CE Typing Container</dfn></dt>
+
+            <dd>An element which has the contentEditable attribute set to
+            `typing` which does not have it's css-display value set to `none`
+            nor does it have any ancestors that do.</dd>
+
+            <dt><dfn>CE False Element</dfn></dt>
+
+            <dd>Any element that has the contentEditable attribute set to
+            `false`.</dd>
+
+            <dt><dfn>CE Typing Node</dfn></dt>
+
+            <dd>
+                Any descendant text node element of a <a>CE Typing
+                Container</a> that does not have a ancestor element that is a
+                <a>CE False Element</a> that is closer to it than the closest
+                ancestor <a>CE Typing Container</a> nor does it have any
+                ancestors that have their css-display value set to `none`.
+            </dd>
+
+            <dt><dfn>Legal Caret Positions</dfn></dt>
+
+            <dd>
+                All positions in which the caret can be placed programmtically.
+                The placement is restricted to before and after any character
+                in any <a>CE Typing Node</a>. If a <a>CE Typing Node</a> is an
+                empty text node, only one position is legal inside of that node
+                and this position is calculated for all purposes as being both
+                before the first character and after the last character in the
+                <a>CE Typing Node</a>.
+            </dd>
+        </dl>
+    </section>
+
+    <section>
+        <h2>Introduction</h2>
+
+        <p style="font-style: italic">This section is non-normative</p>
+
+        <p>The <code>typing</code> state is the foundation of rich text editing
+        on the web, and designed to be used only with a script-based editor
+        implementation. It is not meant to be a stand-alone solution.</p>
+
+        <p>There is no default browser behavior for user input in
+        contenteditable="typing". Intead, it fires Device-Independent Events
+        that can be handled by scripts. Details on those events can be found in
+        the <a href="http://www.w3.org/TR/selection-api/">Selection API</a> and
+        <a href=
+        "http://w3c.github.io/editing-explainer/input-events.html">Input
+        Events</a> specifications. Input Events also contains information on
+        default handling of text input inside a single <a>CE Typing
+        Node</a>.</p>
+
+        <p class="note">When the selections contains a <a>CE Typing
+        Container</a>, `execCommand` and `queryCommand` may not work as they do
+        in other editable elements, or may even fail to execute. These methods
+        are not interoperable nor guaranteed to work against
+        `contentEditable=typing`, and their uses are strongly discouraged.</p>
+    </section>
+
+    <section>
+        <h2>Cutting and pasting</h2>
+
+        <p>With a <a>CE Typing Container</a>, normal cutting and pasting events
+        as used in other editable elements are disabled.</p>
+    </section>
+
+    <section>
+        <h2>Caret drawing and movement</h2>
+
+        <section>
+            <h3>Drawing of caret</h3>
+
+            <p>A caret is drawn in any <a>CE Typing Container</a> that is
+            focused, that does not hold any other selections and contains at
+            least one <a>CE Typing Node</a>. Under such conditions, the caret
+            represents a collapsed selection.</p>
+        </section>
+
+        <section>
+            <h3>Caret modes</h3>
+
+            <dl>
+                <dt><dfn>inline</dfn></dt>
+
+                <dd>
+                    The caret is displayed as a line. The <a>Legal Caret
+                    Positions</a>
+                </dd>
+
+                <dt>for the caret when it is in the inline-mode </dt>
+
+                <dt><dfn>overwrite</dfn></dt>
+
+                <dd>
+                    The caret is displayed as an overlay over the character
+                    that follows it within the <a>CE Typing Node</a>. If the
+                    caret is at the end of a <a>CE Typing Node</a>, so that no
+                    character within the same node follows it, it is displayed
+                    as a line, as if it were in inline-mode.
+                </dd>
+            </dl>
+
+            <p>The caret is initially of type `insert`, but can be modified to
+            be of type `overtype`. The caret of type `insert` is displayed as a
+            line at the beginning of the text character node where it is
+            placed. The caret of type `overtype` overlays the text node
+            character where it is placed fully.</p>
+
+            <p class="issue">We need a method to switch from one type of caret
+            to the other</p>
+        </section>
+
+        <section>
+            <h3>Initial caret placement</h3>
+
+            <p>Carets are initially placed at the start of the first <a>CE
+            Typing Node</a> inside the <a>CE Typing Container</a>.</p>
+        </section>
+
+        <section>
+            <h3>Caret movement</h3>
+
+            <p>Any movement of the caret will have to end with the caret being
+            placed in an already existing <a>CE Typing Node</a>. No text nodes
+            are created, changed or removed automatically due to caret
+            movement.</p>
+
+            <section>
+                <h3>Caret movement by mouse/finger clicks</h3>
+
+                <p>Clicking into <a>CE Typing Containers</a> moves the caret
+                the caret to be as close as possibly to where the click took
+                place. <a>CE False Elements</a> must be avoided.</p>
+            </section>
+
+            <section>
+                <h3>Caret movement with arrow keys</h3>
+
+                <p>Carets can be moved by means of the arrow keys. arrow key
+                event moves the caret in the physical direction indicated,
+                independently of the `text-direction` of the element it is
+                moving in.</p>
+            </section>
+
+            <section>
+                <h3>Default caret movement pattern</h3>
+
+                <section>
+                    <h4>Caret movement within <a>CE Typing Node</a></h4>
+
+                    <p>Each key press event in the `inline direction` or in the
+                    direction opposite to the `inline directions` triggers the
+                    movement of the caret of one position within the current
+                    <a>CE Typing Node</a>.</p>
+                </section>
+
+                <section>
+                    <h4>Caret movement at the end of a <a>CE Typing
+                    Node</a></h4>If the caret is at end of a <a>CE Typing
+                    Node</a> before the movement takes place, and the requested
+                    movement would cause it to go beyond the end of the <a>CE
+                    Typing Node</a>, the caret is moved into the start of the
+                    next following <a>CE Typing Node</a> that is part of the
+                    same <a>CE Typing Container</a>. If this movement did not
+                    cause it to move by at least 1px, the caret is moved one
+                    additional position.
+
+                    <p></p>
+
+                    <p>If there is no following <a>CE Typing Node</a> to which
+                    the caret could be moved, it is not moved.</p>
+                </section>
+
+                <section>
+                    <h4>Caret movement at the start of a <a>CE Typing
+                    Node</a></h4>If the caret is at end of a <a>CE Typing
+                    Node</a> before the movement takes place, and the requested
+                    movement would cause it to go beyond the start of the <a>CE
+                    Typing Node</a>, the caret is moved into the start of the
+                    last preceeding <a>CE Typing Node</a> that is part of the
+                    same <a>CE Typing Container</a>. If this movement did not
+                    cause it to move by at least 1px, the caret is moved one
+                    additional position.
+
+                    <p></p>
+
+                    <p>If there is no previous <a>CE Typing Node</a> to which
+                    the caret could be moved, it is not moved.</p>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <section>
+        <h2>Text Node Editing</h2>
+
+        <p>When the user indicates that new content should be added to the
+        <a>CE Typing Node</a> in which the caret is currently place, no content
+        is actually added, but a `beforeInput` event is triggered with
+        `inputType` set to `insertCharacter` or `overwriteCharacter`, depending
+        on the current mode of the caret.</p>
+
+        <section>
+            <h3>Adding characters by means of composition/IME</h3>
+
+            <p>If a caret is present, and composition of a character through
+            IME is initiated, composition visually is shown inline at the
+            location of the caret. The composition takes place within the
+            Shadow DOM, using the <a>CE Typing Node</a> as a shadow root, with
+            no changes occuring at the DOM level. When the composition of the
+            character(s) has finished, a beforeInput event is triggered for each
+            generated character in the order they are to be added as if the
+            character(s) had been entered via the keyboard.</p>
+
+            <p>If the caret is in <a>overwrite</a>-mode at the time the
+            character composition is initiated, and the caret is not placed
+            behind the last character within a <a>CE Typing Node</a>, the
+            character that follows the caret is hidden during composition.</p>
+
+            <p>If the user cancels character composition before it has finished,
+            the inline composition is cleared and the caret is returned to the
+            state it had before composition was initiated.</p>
+        </section>
+
+        <section>
+            <h2>Replacing text</h2>
+
+            <p>When the user indicates he wants to replace part of the contents
+            of a <a>CE Typing Node</a> by means of a browser-builtin spell
+            cehcker or alike, a `beforeInput` input with `inputType` set to
+            `replaceText` is triggered.</p>
+        </section>
+    </section>
+
+    <section>
+        <h3>Removal of content</h3>
+
+        <p>Content is not removed automatically through user input. Instead,
+        Del/Backspace key presses, etc. trigger user beforeInput events with
+        `inputType` set to `deleteContent`.</p>
+    </section>
+
+    <section>
+        <h2>Acknowledgements</h2>
+
+        <p>Thanks to: Robin Berjon, Olivier Forget, Koji Ishii, Frederico
+        Caldeira Knabben, Ryosuke Niwa, Joanmarie ... and everyone in the
+        Editing Taskforce for their input and feedback.</p>
+    </section>
+</body>
+</html>
