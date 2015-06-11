@@ -1,0 +1,55 @@
+
+@import "../node_modules/normalize.css/normalize.css";
+@import "fonts.css";
+
+html {
+    font-family:  Titillium;
+}
+header {
+    border-bottom:  1px solid silver;
+    margin-bottom:  50px;
+}
+header > h1, body > p, body > section, footer > p {
+    max-width:  800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    color: #648ff1;
+    font-size:  50px;
+    font-weight:    300;
+    margin: 0;
+}
+a {
+    color:  #648ff1;
+    text-decoration:    underline #84df5d;
+}
+a:hover {
+    color:  #84df5d;
+    text-decoration:    underline #648ff1;
+}
+h2 {
+    font-weight:    300;
+    font-size:  30px;
+    margin-bottom:  10px;
+    border-left:    15px solid #648ff1;
+    padding-left:   5px;
+    margin-left:    -20px;
+}
+section {
+    margin-top: 50px
+}
+footer {
+    background: #648ff1;
+    margin-top: 100px;
+}
+footer > p {
+    margin-bottom:  0;
+    text-align: right;
+}
+@media (max-width: 840px) {
+    header > h1, body > p, body > section, footer > p {
+        margin-left: 20px;
+        margin-right: 20px;
+    }    
+}

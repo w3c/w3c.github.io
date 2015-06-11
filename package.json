@@ -1,0 +1,22 @@
+{
+  "name": "w3c-github-io",
+  "version": "0.0.1",
+  "private":    true,
+  "scripts": {
+    "build-css": "cleancss -o ./css/wgio.min.css ./css/wgio.css",
+    "build": "npm run build-css",
+    "watch": "nodemon -e js,css,html,png,jpg,svg --watch css --ignore css/wgio.min.css --exec 'npm run build'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/w3c/w3c.github.io.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css": "^3.2.10",
+    "nodemon": "1.3.7",
+    "normalize.css": "^3.0.3"
+  },
+  "dependencies": {
+  }
+}

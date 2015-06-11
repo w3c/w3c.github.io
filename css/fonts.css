@@ -1,0 +1,56 @@
+
+/* Extra-thin, used for headings */
+@font-face {
+    font-family: "Titillium";
+    src: url("../fonts/titilliumweb-extralight-webfont.eot");
+    src: url("../fonts/titilliumweb-extralight-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/titilliumweb-extralight-webfont.woff2") format("woff2"),
+         url("../fonts/titilliumweb-extralight-webfont.woff") format("woff"),
+         url("../fonts/titilliumweb-extralight-webfont.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Light & light italic, used as regular */
+@font-face {
+    font-family: "Titillium";
+    src: url("../fonts/titilliumweb-light-webfont.eot");
+    src: url("../fonts/titilliumweb-light-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/titilliumweb-light-webfont.woff2") format("woff2"),
+         url("../fonts/titilliumweb-light-webfont.woff") format("woff"),
+         url("../fonts/titilliumweb-light-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Titillium";
+    src: url("../fonts/titilliumweb-lightitalic-webfont.eot");
+    src: url("../fonts/titilliumweb-lightitalic-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/titilliumweb-lightitalic-webfont.woff2") format("woff2"),
+         url("../fonts/titilliumweb-lightitalic-webfont.woff") format("woff"),
+         url("../fonts/titilliumweb-lightitalic-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Semibold & semibold italic, used as bold */
+@font-face {
+    font-family: "Titillium";
+    src: url("../fonts/titilliumweb-semibold-webfont.eot");
+    src: url("../fonts/titilliumweb-semibold-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/titilliumweb-semibold-webfont.woff2") format("woff2"),
+         url("../fonts/titilliumweb-semibold-webfont.woff") format("woff"),
+         url("../fonts/titilliumweb-semibold-webfont.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Titillium";
+    src: url("../fonts/titilliumweb-semibolditalic-webfont.eot");
+    src: url("../fonts/titilliumweb-semibolditalic-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/titilliumweb-semibolditalic-webfont.woff2") format("woff2"),
+         url("../fonts/titilliumweb-semibolditalic-webfont.woff") format("woff"),
+         url("../fonts/titilliumweb-semibolditalic-webfont.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
