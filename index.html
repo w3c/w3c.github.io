@@ -32,9 +32,14 @@
       </p>
       <pre>
         {
-            "group":      40318
-        ,   "contacts":   ["darobin", "sideshowbarker"]
-        ,   "shortName":  "html5"
+            "group":        40318
+        ,   "contacts":     ["darobin", 
+                             {
+                               "github" : "sideshowbarker",
+                               "w3c"    : "mike"
+                             }
+                            ]
+        ,   "shortName":    "html5"
         }
       </pre>
       <p>
@@ -52,7 +57,8 @@
           An array of people who are considered points of contact for the repository for 
           administrative requests. They aren't necessarily the primary contributor and they aren't
           necessarily from the W3C Team. Whatever works for any given repository is acceptable.
-          For integration purposes, please use your <em>GitHub</em> ID.
+          For integration purposes, please use your <em>GitHub</em> ID; if necessary (i.e., the GitHub ID does not
+          have enough information) the ID can be extended with the W3C id like in the example above.
         </dd>
         <dt><code>shortName</code></dt>
         <dd>
