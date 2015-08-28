@@ -3,7 +3,7 @@ var fs = require("fs")
 ,   jn = require("path").join
 ,   rfs = function (f) { return fs.readFileSync(jn(__dirname, f), "utf8"); }
 ,   head = rfs("tmpl/top.html")
-,   foot = rfs("tmpl/botton.html")
+,   foot = rfs("tmpl/bottom.html")
 ,   nav = rfs("tmpl/nav.html")
 ;
 
@@ -22,6 +22,7 @@ fs.readdirSync(__dirname)
         ,   locals = JSON.parse(parts[0])
         ,   body = parts[1]
         ,   out = head.replace(/\{\{(\w+)\}\}/g, function (m, p1) {
+                if (p1 === "h1" && !locals.h1) return locals.title;
                 return locals[p1] || "XXX";
             })
         ;
