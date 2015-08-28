@@ -4,8 +4,9 @@
   "private":    true,
   "scripts": {
     "build-css": "cleancss -o ./css/wgio.min.css ./css/wgio.css",
-    "build": "npm run build-css",
-    "watch": "nodemon -e js,css,html,png,jpg,svg --watch css --ignore css/wgio.min.css --exec 'npm run build'"
+    "build-html":   "node build.js",
+    "build": "npm run build-css & npm run build-html",
+    "watch": "nodemon -e js,css,src --watch css --ignore css/wgio.min.css --exec 'npm run build'"
   },
   "repository": {
     "type": "git",

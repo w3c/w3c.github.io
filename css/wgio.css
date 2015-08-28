@@ -9,7 +9,7 @@ header {
     border-bottom:  1px solid silver;
     margin-bottom:  50px;
 }
-header > h1, body > p, body > section, footer > p {
+header > h1, body > p, body > section, body > main, footer > p {
     max-width:  800px;
     margin-left: auto;
     margin-right: auto;
