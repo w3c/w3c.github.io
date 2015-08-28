@@ -1,0 +1,199 @@
+<!--
+  CAUTION: This is auto-generated; edit the .src instead.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="css/wgio.min.css">
+  </head>
+  <body>
+    <header>
+      <h1>FAQ</h1>
+    </header>
+<nav>
+  <a href="index.html">Home</a>
+  •
+  <a href="https://github.com/w3c/">Repositories</a>
+  •
+  <a href="https://help.github.com/">GitHub Help</a>
+</nav>
+
+<main>
+  <p>
+    <a href="http://git-scm.com/">Git</a> is a popular, open-source distributed version control
+    system, commonly used with <a href="https://github.com/">GitHub</a> as a convenient central host
+    of repositories, along with wiki documentation, pull request management and issue tracking.
+    Several W3C groups are using GitHub infrastructure for specification and test authoring
+    workflows. Below we include some suggested steps for getting started and answers to some
+    frequently asked questions about using GitHub for W3C spec work.
+  </p>
+  <section>
+    <h2>Getting Started</h2>
+    <section>
+      <h3>Informal drafts in your personal account</h3>
+      <p>
+        Getting started individually obviously doesn't require any approval process. Create an
+        informal draft (using ReSpec makes it easy) by starting a new repository with your personal
+        GitHub account. We strongly recommend one repository per document, unless you really 
+        know why you're doing it differently.
+      </p>
+      <p>
+        You can just publish HTML as you normally would simply by putting the content in a
+        <code>gh-pages</code> branch (details below).
+      </p>
+    </section>
+    <section>
+      <h3>Hosting a repository within the <code>w3c</code> organisation</h3>
+      <ol>
+        <li>
+          Your Team Contact should become (if they're not already) a part of the
+          <a href="https://github.com/organizations/w3c/settings/owners">Owners Team</a> of the W3C
+          organisation. (Ask any of the current owners directly, or ask on &amp;sysreq. This is only
+          for W3C Staff.)
+        </li>
+        <li>
+          If there is no GitHub team roughly matching the group that will be pushing to that
+          repository, the Team Contact should create a new team for the editors who will be
+          contributing to the document, and give that team push and pull access.
+        </li>
+        <li>
+          Create a new repository for each document (each deliverable, it can of course contain
+          multiple resources). Add each such repository to the GitHub team so that the contributors
+          all have push access. Other people can suggest changes by submitting pull requests (in
+          fact, editors can do that too to enable reviewing before commits, if desired), but not
+          every contributor will be given direct commit access.
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h3>Detailed steps for staff contacts to create a repo</h3>
+      <ol>
+        <li>
+          Let's say you're working on the unicorn spec. You head to <a
+          href="https://github.com/new">https://github.com/new</a> (which is linked as "New
+          repository" from the home page). Under Owner you pick "w3c" (which you should have access
+          to, if not ask someone on IRC) and under repo name you pick "unicorn". Enter a
+          description, keep it public, initialise with a README, don't pick a .gitignore or a
+          license.
+        </li>
+        <li>
+          If you need to create a new team, go to <a
+          href="https://github.com/organizations/w3c/teams/new">https://github.com/organizations/w3c/teams/new</a>.
+          Give the team a name ("Unicorn Editors") and grant them "Push &amp; Pull" (no need for
+          admin). Save the team. Under "Members", just start typing the user names for the editors,
+          you'll get a drop down suggesting people. Once you've added them all, under repository
+          start typing "unicorn" and you should see w3c/unicorn listed. Pick that.
+        </li>
+        <li>
+          That will give you a <code>https://github.com/w3c/unicorn</code> with fully configured
+          access.
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h3>Using <code>gh-pages</code></h3>
+      <p>
+        In specification development, the reader will most often want to read the spec itself,
+        rather than the raw HTML source code. GitHub provides easy functionality for this via the
+        <code>gh-pages</code> branch and <a
+        href="https://help.github.com/categories/20/articles">GitHub Pages</a>.
+      </p>
+      <p>
+        You have a couple of alternatives. Get rid of the default <code>master</code> branch:
+      </p>
+      <ol>
+        <li>
+          Create a <code>gh-pages</code> branch: in your local clone do <code>git checkout -b
+          gh-pages</code> (that will create a separate "gh-pages") branch, followed by <code>git
+          push origin gh-pages</code> (to push this branch back to the repository).
+        </li>
+        <li>
+          Go to the repository, choose "settings", and select "gh-pages" as the default branch.
+        </li>
+        <li>
+          Delete the <code>master</code> branch: <code>git branch -D master</code> then
+          <code>git push origin --delete master</code>.
+        </li>
+        <li>
+          Add content to <code>gh-pages</code> and push it. Web content there will just work.
+        </li>
+      </ol>
+      <p>
+        The default file name if none is given is the typical <code>index.html</code>. We recommend
+        you don't use the W3C's idiosyncratic <code>Overview.html</code>.
+      </p>
+      <p>
+        Once you have made these changes, the content of your documents will be available through
+        <code>http://w3c.github.io/$reponame/</code>. (This can sometimes take a minute.)
+      </p>
+      <p>
+        <a href="specs.html">Using GitHub for Spec Work</a> describes how to get started using this
+        method and starting with a template and ReSpec.
+      </p>
+      <p>
+        Alternatively, you can continue to use the <code>master</code> branch for development and
+        writing but <a
+        href="http://concord-consortium.github.io/developer-notes/automating-gh-pages-integration.html">use
+        a post-commit hook</a> to simultaneously push those changes to <code>gh-pages</code>.
+      </p>
+    </section>
+  </section>
+  <section>
+    <h2>W3C Integration</h2>
+    <section>
+      <h3></h3>
+    </section>
+    === Github and W3C mailing list===
+    Solution 1 : If you want to get any github modification being directed to a W3C mailing list, you may create a GH user, give it an addition email address that is the one you want to see notified and configure that to receive notifications, then make it watch the repos you want watched.
+    Solution 2 : To have notification to the mail list at opening of new bugs/issues and modification of existing ones from github, you may use the [https://github.com/dontcallmedom/github-notify-ml/ github notification solution] design by Dominique Hazael-Massieux. That solution promises to be more flexible and tunable, then solution 1.
+  </section>
+  <section>
+    <h2>Policy</h2>
+    <section>
+      <h3></h3>
+    </section>
+    === How do we ensure archiving of work done on GitHub? ===
+
+    As usual, publication of Working Drafts and Recommendations into w3.org/TR/ will be done by your Team Contact by copying snapshots which satisfy pubrules into the appropriate space, with W3C-guaranteed archiving.
+
+    A common use case would be for editors' drafts to be pointers to the head revision of a git repository's master branch as it appears on GitHub. Because Git itself decentralizes archiving of every change (every user clones all history), backups of version history of Git repositories should be straightforward. W3C systeam is considering automated W3C backups of repositories within the GitHub W3C organization.
+
+    Issues, wikis, pull requests and other GitHub-hosted workflows may not be as straightforward to archive, and your group members may need their own GitHub accounts to make effective use of those features. GitHub repository wikis are themselves Git repositories, so backup should be relatively simple.
+
+    <section>
+      <h3></h3>
+    </section>
+    === When should we use Git/GitHub as opposed to w3.org-hosted CVS or Mercurial? ===
+
+    ''tl;dr'' -- your version control system is up to you and your group, but GitHub is growing increasingly popular among our Working Groups.
+
+    W3C has no official recommendations of what version control system your Group should use. Your Group's editors will be the ones most often using the chosen version control system, and your Group's participants may have their own preferences regarding viewing version history or proposing changes. GitHub has some real advantages for specification and test authoring: histories of changes are all public; Git and GitHub are commonly used tools among developers; easy branching can facilitate sharing in-progress proposals, etc. With CVS editors and chairs can make direct changes to w3.org-hosted specifications, but setup also requires an SSH key setup process with w3.org systeam.
+
+    <section>
+      <h3></h3>
+    </section>
+    === Should we use GitHub for issue management too? ===
+
+    Different groups have had different preferences on the best way to manage spec issues and code issues. Repositories that manage test code often use [https://github.com/blog/831-issues-2-0-the-next-generation GitHub issues] extensively or exclusively, and they may also work well for issue workflows where an editor's single commit will often be the resolution of an issue or pull requests are commonly used.
+
+    [https://www.w3.org/Bugs/Public/ Bugzilla] is often used by groups (like HTML WG) that have a relatively complex issue resolution process.
+
+    [http://www.w3.org/2005/06/tracker/ Tracker] is particularly useful for integration with IRC trackbot and connecting mailing list discussion of an issue. (Tracker also separately tracks "actions" which are not present in GitHub's workflow.)
+
+    <section>
+      <h3></h3>
+    </section>
+    === How do we manage IPR with specs authored on GitHub? ===
+
+    As with any specification, text contributions with IPR implications should be included only from formal participants in a Working Group who have made the necessary IPR commitments. Likely only the Working Group's editors and chairs should have commit privileges to your group's specification repositories. Editors should take special care when accepting Pull Requests that the appropriate IPR commitments have been made (as you do with text suggestions made to the group mailing list); chairs and staff should make sure editors understand this.
+  </section>
+</main>    <footer>
+      <p>
+        <a href="https://w3.org/"><img src="img/w3c.svg" width="65" height="45" alt="W3C Logo"></a>
+      </p>
+    </footer>
+  </body>
+</html>
