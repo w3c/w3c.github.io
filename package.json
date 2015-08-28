@@ -6,7 +6,7 @@
     "build-css": "cleancss -o ./css/wgio.min.css ./css/wgio.css",
     "build-html":   "node build.js",
     "build": "npm run build-css & npm run build-html",
-    "watch": "nodemon -e js,css,src --watch css --ignore css/wgio.min.css --exec 'npm run build'"
+    "watch": "nodemon -e js,css,src --watch . --watch css --ignore css/wgio.min.css --exec 'npm run build'"
   },
   "repository": {
     "type": "git",

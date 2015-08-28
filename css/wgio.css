@@ -45,6 +45,12 @@ h2 {
 section {
     margin-top: 50px
 }
+dt {
+    font-weight:    bold;
+}
+dd {
+    margin-bottom:  20px;
+}
 footer {
     background: #648ff1;
     margin-top: 100px;
