@@ -1,0 +1,124 @@
+<!--
+  CAUTION: This is auto-generated; edit the .src instead.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Using GitHub for Spec Work</title>
+    <link rel="stylesheet" href="css/wgio.min.css">
+  </head>
+  <body>
+    <header>
+      <h1>Using GitHub for Spec Work</h1>
+    </header>
+<nav>
+  <a href="index.html">Home</a>
+  •
+  <a href="https://github.com/w3c/">Repositories</a>
+  •
+  <a href="https://help.github.com/">GitHub Help</a>
+</nav>
+
+<main>
+  <ol>
+    <li>
+      <p>
+        <a href="https://help.github.com/articles/creating-a-new-repository">Create a new GitHub
+        repository</a>. The spec's short name in lowercase is usually a good choice.
+      </p>
+    </li>
+    <li>
+      <p>
+        Clone the repository locally,
+      </p>
+      <pre><code>git clone git@github.com:tobie/specs-on-github.git</code></pre>
+    </li>
+    <li>
+      <p>
+        Navigate to the repo…
+      </p>
+      <pre><code>cd specs-on-github</code></pre>
+    </li>
+    <li>
+      <p>
+        …and create a new branch which you'll call <code>gh-pages</code>.
+      </p>
+      <pre><code>git checkout -b gh-pages</code></pre>
+      <p>
+        Branches named that way trigger GitHubs's <a href="http://pages.github.com/">Pages mode</a>.
+        When in Pages mode, the repository's content gets automagically served from
+        http://username.github.com/reponame.
+      </p>
+    </li>
+    <li>
+      <p>
+        Now we want to create the spec document itself. I use <a
+        href="https://github.com/darobin/respec/">ReSpec</a>, so I simply curl the content of the
+        default template into an <code>index.html</code> page at the root of my repository:
+      </p>
+      <pre><code>curl http://www.w3.org/respec/examples/template.html &gt; index.html</code></pre>
+    </li>
+    <li>
+      <p>
+        We can then add it to the repository:
+      </p>
+      <pre><code>git add index.html
+git commit -m "Add empty doc."</code></pre>
+    </li>
+    <li>
+      <p>
+        Lets now push these changes back to our GitHub account:
+      </p>
+      <pre><code>git push origin gh-pages</code></pre>
+    </li>
+    <li>
+      <p>
+        The first time you push to a <code>gh-pages</code> it can take a little while for the code
+        to be published to your subdomain, so be patient. But it'll be ready soon enough.
+      </p>
+    </li>
+    <li>
+      <p>
+        In the meantime you can visit the repository's admin page and select <code>gh-pages</code>
+        as the default branch.
+      </p>
+      <p>
+        <img src="screenshot.jpg" height="258" width="627"
+            alt="How to select the gh-pages as the default branch using GitHub's UI.">
+      </p>
+    </li>
+    <li>
+      <p>
+        You can now delete the <code>master</code> branch.
+      </p>
+      <pre><code>git branch -D master
+git push origin --delete master</code></pre>
+    </li>
+    <li>
+      <p>
+        Finally, your <code>README.md</code> file should reflect the repository is used for spec
+        work. You can just copy an existing <code>README.md</code> if you can't recall the Markdown
+        specifics and amend it accordingly.
+      </p>
+      <pre><code>curl https://raw.github.com/tobie/specs-on-github/gh-pages/README.md &gt; README.md
+# Change the links inside of the readme file
+git add README.md
+git commit -m "Updated README to link to live spec."
+git push origin</code></pre>
+    </li>
+    <li>
+      <p>
+        Bask in the glory of modern spec development.
+      </p>
+    </li>
+  </ol>
+</main>
+    <footer>
+      <p>
+        <a href="https://w3.org/"><img src="img/w3c.svg" width="65" height="45" alt="W3C Logo"></a>
+      </p>
+    </footer>
+  </body>
+</html>
