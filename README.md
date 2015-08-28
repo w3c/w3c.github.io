@@ -33,3 +33,8 @@ To start the nodemon watcher that rebuilds both automatically:
 You will note that some subdirectories have HTML content as well. Those are only there when some
 `gh-pages` repositories have moved; they are typically redirects. All the content for the 
 documentation is at the root, as `*.src` files (the structure of which ought to be obvious).
+
+## Process
+
+It is **strongly** recommended that you use pull requests when making changes, so that someone may
+review them.
