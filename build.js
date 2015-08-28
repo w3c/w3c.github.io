@@ -26,7 +26,7 @@ fs.readdirSync(__dirname)
                 return locals[p1] || "XXX";
             })
         ;
-        if (f !== "index.src") out += nav;
+        out += nav;
         out += body + foot;
         fs.writeFileSync(jn(__dirname, outName), out, "utf8");
     })
