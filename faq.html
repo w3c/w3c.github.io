@@ -144,53 +144,80 @@
   <section>
     <h2>W3C Integration</h2>
     <section>
-      <h3></h3>
+      <h3>Github and W3C mailing list</h3>
+      <p>
+        To have notification to the mail list at opening of new bugs/issues and modification of
+        existing ones from GitHub, you may use the <a
+        href="https://github.com/dontcallmedom/github-notify-ml/">github notification solution</a>
+        designed by Dominique Hazael-Massieux.
+      </p>
     </section>
-    === Github and W3C mailing list===
-    Solution 1 : If you want to get any github modification being directed to a W3C mailing list, you may create a GH user, give it an addition email address that is the one you want to see notified and configure that to receive notifications, then make it watch the repos you want watched.
-    Solution 2 : To have notification to the mail list at opening of new bugs/issues and modification of existing ones from github, you may use the [https://github.com/dontcallmedom/github-notify-ml/ github notification solution] design by Dominique Hazael-Massieux. That solution promises to be more flexible and tunable, then solution 1.
+    <section>
+      <h3>Contributor Management</h3>
+      <p>
+        If you wish to accept pull requests from potentially arbitrary contributors but you need to
+        ensure that they have signed up to the IPR terms, see the
+        <a href="repo-management.html">Contributor Management</a> section.
+      </p>
+    </section>
   </section>
   <section>
     <h2>Policy</h2>
     <section>
-      <h3></h3>
+      <h3>How do we ensure archiving of work done on GitHub?</h3>
+      <p>
+        As usual, publication of Working Drafts and Recommendations into w3.org/TR/ will be done by
+        your Group by copying snapshots which satisfy pubrules into the appropriate space, with
+        W3C-guaranteed archiving.
+      </p>
+      <p>
+        Because Git itself decentralises archiving of every change (every user clones all history),
+        backups of version history of Git repositories are straightforward (since in fact every user
+        of the repository has a backup). A specific tool to maintain a full backup of the W3C
+        organisation is being developed, called <a
+        href="https://github.com/w3c/gh-backup">gh-backup</a>.
+      </p>
+      <p>
+        Content that is not part of the repositories themselves (issues, wikis, pull requests, etc.)
+        are backed up as events to the <a href="https://github.com/w3c/pheme">Pheme</a> system (for
+        the whole organisation). A Pheme instance is currently running in beta at the
+        <a href="https://labs.w3.org/hatchery/pheme/">Hatchery Pheme instance</a>; and some of the
+        recent events can be viewed in the <a href="https://labs.w3.org/hatchery/midgard/">Hatchery 
+        Midgard instance</a>. The full data can be made exploitable as it is all sorted and 
+        indexable.
+      </p>
     </section>
-    === How do we ensure archiving of work done on GitHub? ===
-
-    As usual, publication of Working Drafts and Recommendations into w3.org/TR/ will be done by your Team Contact by copying snapshots which satisfy pubrules into the appropriate space, with W3C-guaranteed archiving.
-
-    A common use case would be for editors' drafts to be pointers to the head revision of a git repository's master branch as it appears on GitHub. Because Git itself decentralizes archiving of every change (every user clones all history), backups of version history of Git repositories should be straightforward. W3C systeam is considering automated W3C backups of repositories within the GitHub W3C organization.
-
-    Issues, wikis, pull requests and other GitHub-hosted workflows may not be as straightforward to archive, and your group members may need their own GitHub accounts to make effective use of those features. GitHub repository wikis are themselves Git repositories, so backup should be relatively simple.
-
     <section>
-      <h3></h3>
+      <h3>When should we use Git/GitHub as opposed to w3.org-hosted CVS or Mercurial?</h3>
+      <p>
+        It's up to your group to decide, but using anything other than git is generally considered
+        cruel and unusual. You can use git without using GitHub of course, but GitHub tends to be
+        where a group's community resides which makes it easier to get contributions. Also, a lot of
+        the W3C's more recent tooling assumes GitHub.
+      </p>
     </section>
-    === When should we use Git/GitHub as opposed to w3.org-hosted CVS or Mercurial? ===
-
-    ''tl;dr'' -- your version control system is up to you and your group, but GitHub is growing increasingly popular among our Working Groups.
-
-    W3C has no official recommendations of what version control system your Group should use. Your Group's editors will be the ones most often using the chosen version control system, and your Group's participants may have their own preferences regarding viewing version history or proposing changes. GitHub has some real advantages for specification and test authoring: histories of changes are all public; Git and GitHub are commonly used tools among developers; easy branching can facilitate sharing in-progress proposals, etc. With CVS editors and chairs can make direct changes to w3.org-hosted specifications, but setup also requires an SSH key setup process with w3.org systeam.
-
     <section>
-      <h3></h3>
+      <h3>Should we use GitHub for issue management too?</h3>
+      <p>
+        Issue-management tooling is entirely up to groups to choose. That being said, the same notes
+        apply as for the previous question: if you wish to communicate with a broader community,
+        GitHub is usually the better option.
+      </p>
     </section>
-    === Should we use GitHub for issue management too? ===
-
-    Different groups have had different preferences on the best way to manage spec issues and code issues. Repositories that manage test code often use [https://github.com/blog/831-issues-2-0-the-next-generation GitHub issues] extensively or exclusively, and they may also work well for issue workflows where an editor's single commit will often be the resolution of an issue or pull requests are commonly used.
-
-    [https://www.w3.org/Bugs/Public/ Bugzilla] is often used by groups (like HTML WG) that have a relatively complex issue resolution process.
-
-    [http://www.w3.org/2005/06/tracker/ Tracker] is particularly useful for integration with IRC trackbot and connecting mailing list discussion of an issue. (Tracker also separately tracks "actions" which are not present in GitHub's workflow.)
-
     <section>
-      <h3></h3>
+      <h3>How do we manage IPR with specs authored on GitHub?</h3>
+      <p>
+        In general, in the same way as for any other contribution intake mechanism. GitHub only 
+        tends to be singled out because it often leads to more contributions.
+      </p>
+      <p>
+        See <a href="repo-management.html">Contributor Management</a> for a tool that is available
+        to automate that process.
+      </p>
     </section>
-    === How do we manage IPR with specs authored on GitHub? ===
-
-    As with any specification, text contributions with IPR implications should be included only from formal participants in a Working Group who have made the necessary IPR commitments. Likely only the Working Group's editors and chairs should have commit privileges to your group's specification repositories. Editors should take special care when accepting Pull Requests that the appropriate IPR commitments have been made (as you do with text suggestions made to the group mailing list); chairs and staff should make sure editors understand this.
   </section>
-</main>    <footer>
+</main>
+    <footer>
       <p>
         <a href="https://w3.org/"><img src="img/w3c.svg" width="65" height="45" alt="W3C Logo"></a>
       </p>
