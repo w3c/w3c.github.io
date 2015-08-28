@@ -54,13 +54,34 @@
       If your group accepts contributions from a broad set of people through pull requests, this
       tool can help you make sure that the contributors have signed the requisite IPR agreements.
     </dd>
-    <dt><a href=""></a></dt>
+    <dt>
+      <a href="https://github.com/w3c/echidna/wiki/Setting-up-Echidna-as-a-GitHub-hook">Automatic
+      Publication from GitHub</a>
+    </dt>
     <dd>
-      
+      In general, it is strongly recommended to use <a
+      href="https://github.com/w3c/echidna/wiki">Echidna</a> to publish TR documents rather than the
+      manual path that goes through the Webmaster (assuming of course that your document is of a
+      supported type). This document explains how to set up your repository using Travis CI in order
+      to automatically publish on every commit (to a given branch) and never again have to worry
+      about what people used to call “heartbeat” publications. With this, you can even get rid of 
+      the notion of Editor's Draft altogether.
     </dd>
-    <dt><a href=""></a></dt>
+    <dt><a href="https://labs.w3.org/hatchery/midgard/">Keeping Track with Midgard</a></dt>
     <dd>
-      
+      One problem is GitHub is that everything happens in spread out repositories, which can at
+      times make it difficult to remain informed of what's going on. Midgard helps there by
+      filtering the data into mailboxes so that you can for instance get all the events for
+      WebRTC repositories. Log in there with your W3C credentials, and just start using it. Note:
+      it does not at this time have many filters and it is likely that your area of interest may not
+      yet have one. If you wish to add one (which is easy) you should read
+      <a href="https://github.com/w3c/midgard/blob/master/DEVELOPMENT.md#libfilterseventsjs">the
+      documentation on Pheme filters</a>.
+    </dd>
+    <dt><a href="w3c.json.html">The <code>w3c.json</code> file</a></dt>
+    <dd>
+      This is a small metadata file that is recommended for GitHub repositories under the
+      <code>w3c</code> organisation.
     </dd>
     <dt><a href="w3c.json.html">The <code>w3c.json</code> file</a></dt>
     <dd>
