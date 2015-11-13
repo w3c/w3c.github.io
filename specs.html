@@ -108,10 +108,10 @@ git push origin --delete master</code></pre>
 	<a href="https://github.com/w3c/w3c.github.io/tree/master/templates">the templates provided</a>
 	and amend them accordingly.
       </p>
-      <pre><code>curl https://raw.githubusercontent.com/w3c/w3c.github.io/master/templates/README.md
-curl https://raw.githubusercontent.com/w3c/w3c.github.io/master/templates/LICENSE.md
-curl https://raw.githubusercontent.com/w3c/w3c.github.io/master/templates/CONTRIBUTING.md
-curl https://raw.githubusercontent.com/w3c/w3c.github.io/master/templates/w3c.json
+      <pre><code>curl https://raw.githubusercontent.com/w3c/w3c.github.io/master/templates/README.md &gt; README.md
+curl https://raw.githubusercontent.com/w3c/w3c.github.io/master/templates/LICENSE.md &gt; LICENSE.md
+curl https://raw.githubusercontent.com/w3c/w3c.github.io/master/templates/CONTRIBUTING.md &gt; CONTRIBUTING.md
+curl https://raw.githubusercontent.com/w3c/w3c.github.io/master/templates/w3c.json &gt; w3c.json
 # Edit the files (replace all the @@placeholders).
 git add README.md CONTRIBUTING.md LICENSE.md w3c.json
 git commit -m 'Add basic files: README, W3C JSON, etc.'
