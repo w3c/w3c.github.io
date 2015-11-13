@@ -1,0 +1,6 @@
+{
+    "group":     "@@group-ID",
+    "contacts":  ["@@editor-1", "@@editor-2", "@@some-maintainer"],
+    "shortName": "@@shortname",
+    "policy":    "@@open-or-restricted"
+}
