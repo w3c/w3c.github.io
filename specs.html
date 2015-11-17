@@ -99,22 +99,32 @@ git push origin --delete master</code></pre>
     </li>
     <li>
       <p>
-        Finally, set up the boilerplate files.
+        Specify a license.
       </p>
       <p>
-        Your <code>README.md</code> file should reflect the repository is used for spec work;
-	the rest of the files are probably a bit less important.
+        Go to
+	<a href="https://github.com/w3c/licenses"><code>github.com/w3c/licenses</code></a>,
+	choose and download a pair of documents, edit as necessary and add them to the repository.
+      </p>
+      <pre><code>git add CONTRIBUTING.md LICENSE.md
+git commit -m 'Add basic files: license & guidelines for contributing'
+git push origin</code></pre>
+    </li>
+    <li>
+      <p>
+        Finally, set up the other boilerplate files.
+      </p>
+      <p>
+        Your <code>README.md</code> file should reflect the repository is used for spec work.
         You can just copy
-	<a href="https://github.com/w3c/w3c.github.io/tree/master/templates">the templates provided</a>
+	<a href="https://github.com/w3c/w3c.github.io/tree/master/templates">the templates provided in this repo</a>
 	and amend them accordingly.
       </p>
       <pre><code>curl https://raw.githubusercontent.com/w3c/w3c.github.io/master/templates/README.md &gt; README.md
-curl https://raw.githubusercontent.com/w3c/w3c.github.io/master/templates/LICENSE.md &gt; LICENSE.md
-curl https://raw.githubusercontent.com/w3c/w3c.github.io/master/templates/CONTRIBUTING.md &gt; CONTRIBUTING.md
 curl https://raw.githubusercontent.com/w3c/w3c.github.io/master/templates/w3c.json &gt; w3c.json
 # Edit the files (replace all the @@placeholders).
-git add README.md CONTRIBUTING.md LICENSE.md w3c.json
-git commit -m 'Add basic files: README, W3C JSON, etc.'
+git add README.md w3c.json
+git commit -m 'Add basic files: README and W3C JSON'
 git push origin</code></pre>
     </li>
     <li>
