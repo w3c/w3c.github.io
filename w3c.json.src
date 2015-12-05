@@ -19,6 +19,8 @@
         "group":      40318
     ,   "contacts":   ["darobin", "sideshowbarker"]
     ,   "shortName":  "html5"
+    ,   "policy":     "open"
+    ,   "license":    "W3C"
     }
   </pre>
   <p>
@@ -51,6 +53,16 @@
       set to <code>restricted</code> to indicate that for whatever reason, it is preferable to
       let the repository be handled only by team contacts directly associated with it. The
       default value is <code>open</code>.
+    </dd>
+    <dt><code>license</code></dt>
+    <dd>
+      Software or documentation that is packaged for
+      <a href="https://nodejs.org/en/">Node.js</a> and other platforms can benefit from
+      machine-readable license information.
+      Visit <a href="https://spdx.org/">the SPDX (<em>Software Package Data Exchange</em>) web
+      site</a> for more information, and check out <a href="https://spdx.org/licenses/">the
+      complete list of licenses</a>.
+      The value of this field, if it exists, should be a valid SPDX identifier.
     </dd>
   </dl>
 </main>
