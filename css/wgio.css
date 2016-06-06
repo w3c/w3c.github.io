@@ -60,7 +60,7 @@ footer > p {
     text-align: right;
 }
 @media (max-width: 840px) {
-    header > h1, body > p, body > section, footer > p {
+    header > h1, body > p, body > nav, body > main, body > section, footer > p {
         margin-left: 20px;
         margin-right: 20px;
     }    
