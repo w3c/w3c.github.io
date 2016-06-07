@@ -3,60 +3,60 @@
 @import "fonts.css";
 
 html {
-    font-family:  Titillium;
+    font-family: Titillium;
 }
 header {
-    border-bottom:  1px solid silver;
+    border-bottom: 1px solid silver;
 }
 header > h1, body > p, body > section, body > main, body > nav, footer > p {
-    max-width:  800px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 h1 {
     color: #648ff1;
-    font-size:  50px;
-    font-weight:    300;
+    font-size: 50px;
+    font-weight: 300;
     margin: 0;
 }
 nav {
     text-align: right;
-    font-weight:    bold;
+    font-weight: bold;
 }
 main {
-    margin-top:  50px;
+    margin-top: 50px;
 }
 a {
-    color:  #648ff1;
-    text-decoration:    underline #84df5d;
+    color: #648ff1;
+    text-decoration: underline #84df5d;
 }
 a:hover {
-    color:  #84df5d;
-    text-decoration:    underline #648ff1;
+    color: #84df5d;
+    text-decoration: underline #648ff1;
 }
 h2 {
-    font-weight:    300;
-    font-size:  30px;
-    margin-bottom:  10px;
-    border-left:    15px solid #648ff1;
-    padding-left:   5px;
-    margin-left:    -20px;
+    font-weight: 300;
+    font-size: 30px;
+    margin-bottom: 10px;
+    border-left: 15px solid #648ff1;
+    padding-left: 5px;
+    margin-left: -20px;
 }
 section {
     margin-top: 50px
 }
 dt {
-    font-weight:    bold;
+    font-weight: bold;
 }
 dd {
-    margin-bottom:  20px;
+    margin-bottom: 20px;
 }
 footer {
     background: #648ff1;
     margin-top: 100px;
 }
 footer > p {
-    margin-bottom:  0;
+    margin-bottom: 0;
     text-align: right;
 }
 @media (max-width: 840px) {
