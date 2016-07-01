@@ -1,10 +1,10 @@
 {
   "name": "w3c-github-io",
-  "version": "0.0.1",
-  "private":    true,
+  "version": "0.0.2",
+  "private": true,
   "scripts": {
     "build-css": "cleancss -o ./css/wgio.min.css ./css/wgio.css",
-    "build-html":   "node build.js",
+    "build-html": "node build.js",
     "build": "npm run build-css & npm run build-html",
     "watch": "nodemon -e js,css,src --watch . --watch css --ignore css/wgio.min.css --exec 'npm run build'"
   },
@@ -14,10 +14,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "clean-css": "^3.2.10",
-    "nodemon": "1.3.7",
-    "normalize.css": "^3.0.3"
-  },
-  "dependencies": {
+    "clean-css": "3.4.18",
+    "nodemon": "1.9.2",
+    "normalize.css": "4.1.1"
   }
 }
