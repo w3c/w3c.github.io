@@ -1,0 +1,62 @@
+{
+  "title":  "Using GitHub Labels for W3C Specifications Work"
+}
+---
+<main>
+  <p>
+  The purpose of this page is to harmonize the GitHub labels used when working on W3C specifications using GitHub.
+  </p>
+  <h2>Horizontal labels</h2>
+  <p>
+    Those labels are there to facilitate horizontal reviews.
+  </p> 
+  <dl>
+    <dt>security</dt>
+    <dd>Affect the <a href='https://www.w3.org/TR/security-privacy-questionnaire/'>degree of resistance</a> to, or protection from, harm of Web technologies</dd>
+    <dt>privacy</dt>
+    <dd>affect the collection, <a href='https://w3c.github.io/fingerprinting-guidance/'>processing</a> and  <a href='https://www.w3.org/TR/security-privacy-questionnaire/'>publication of personal data</a> in Web technologies.</dd>
+    <dt>a11y</dt>
+    <dd>affect the design of Web technologies for people with disabilities</dd>
+    <dt>i18n</dt>
+    <dd>affect the <a href='https://www.w3.org/International/review-request'>adaptation of Web technologies to different languages or regional differences</a></dd>
+    <dt>architecture</dt>
+    <dd>affect the <a href='https://w3ctag.github.io/design-principles/'>underlying principles</a> that should be adhered to by all Web technologies</dd>
+    <dt>performance</dt>
+    <dd>affect the download and display speed of Web technologies</dd>
+    <dt>device independence</dt>
+    <dd>affect the ability of Web technologies to function on a wide variety of devices</dd>  
+  </dl>
+  <h2>Testing and Implementations</h2>
+  <p>Those labels are meant to track testing and implementation status.</p>
+  <dl>
+    <dt>needs tests</dt>
+    <dd>More tests will be needed in this area to exit the Candidate Recommendation state</dd>
+    <dt>needs implementation</dt>
+    <dd>More implementation experience is needed in this area</dd>
+    <dt>test:missing-coverage</dt>
+    <dd>More tests will be needed in this area</dd>
+  </dl>
+  <h2>Specifications</h2>
+  <dl>
+    <dt>editorial</dt>
+    <dd>The reported issue can be addressed with an editorial change</dd>
+    <dt>substantive</dt>
+    <dd>The reported issue will only be addressed with a substantive change</dd>
+    <dt>bug</dt>
+    <dd>The specification may need to change</dd>
+    <dt>enhancement</dt>
+    <dd>The specification could be improved</dd>
+    <dt>help wanted</dt>
+    <dd>The editor and/or Group need to resolve this issue</dd>
+    <dt>invalid</dt>
+    <dd>This issue or pull request was declared out of scope</dd>
+    <dt>duplicate</dt>
+    <dd>This issue or pull request is a duplicate and will be closed if not already closed</dd>
+    <dt>wontfix</dt>
+    <dd>This issue won't get addressed</dd>
+    <dt>w3c</dt>
+    <dd>This is used to track W3C Process related issues, such as transitions</dd>   
+  </dl>
+
+  </dl>
+</main>
