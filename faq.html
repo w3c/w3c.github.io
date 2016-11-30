@@ -24,7 +24,7 @@
 
 <main>
   <p>
-    <a href="http://git-scm.com/">Git</a> is a popular, open-source distributed version control
+    <a href="https://git-scm.com/">Git</a> is a popular, open-source distributed version control
     system, commonly used with <a href="https://github.com/">GitHub</a> as a convenient central host
     of repositories, along with wiki documentation, pull request management and issue tracking.
     Several W3C groups are using GitHub infrastructure for specification and test authoring
@@ -42,8 +42,9 @@
         know why you're doing it differently.
       </p>
       <p>
-        You can just publish HTML as you normally would simply by putting the content in a
-        <code>gh-pages</code> branch (details below).
+        You can just publish HTML as you normally would simply by setting up
+        <a href="https://github.com/blog/2228-simpler-github-pages-publishing">GitHub Pages</a>
+        to use the default branch, <code>master</code>.
       </p>
     </section>
     <section>
@@ -78,6 +79,14 @@
     </section>
     <section>
       <h3>Detailed steps for staff contacts to create a repo</h3>
+      <p>
+        <strong>
+          The preferred way to create new repositories is by using
+          <a href="https://labs.w3.org/hatchery/repo-manager/">ash-nazg</a>, in particular this page:
+          <a href="https://labs.w3.org/hatchery/repo-manager/repo/new"><code>labs.w3.org/hatchery/repo-manager/repo/new</code></a>.
+        </strong>
+      </p>
+      <p>Follow the instructions below only if for some reason you can't use ash-nazg for this.</p>
       <ol>
         <li>
           Let's say you're working on the unicorn spec. You head to <a
@@ -101,54 +110,6 @@
         </li>
       </ol>
     </section>
-    <section>
-      <h3>Using <code>gh-pages</code></h3>
-      <p>
-        In specification development, the reader will most often want to read the spec itself,
-        rather than the raw HTML source code. GitHub provides easy functionality for this via the
-        <code>gh-pages</code> branch and <a
-        href="https://help.github.com/categories/20/articles">GitHub Pages</a>.
-      </p>
-      <p>
-        You have a couple of alternatives. Get rid of the default <code>master</code> branch:
-      </p>
-      <ol>
-        <li>
-          Create a <code>gh-pages</code> branch: in your local clone do <code>git checkout -b
-          gh-pages</code> (that will create a separate "gh-pages") branch, followed by <code>git
-          push origin gh-pages</code> (to push this branch back to the repository).
-        </li>
-        <li>
-          Go to the repository, choose "settings", and select "gh-pages" as the default branch.
-        </li>
-        <li>
-          Delete the <code>master</code> branch: <code>git branch -D master</code> then
-          <code>git push origin --delete master</code>.
-        </li>
-        <li>
-          Add content to <code>gh-pages</code> and push it. Web content there will just work.
-        </li>
-      </ol>
-      <p>
-        The default file name if none is given is the typical <code>index.html</code>. We recommend
-        you don't use the W3C's idiosyncratic <code>Overview.html</code>.
-      </p>
-      <p>
-        Once you have made these changes, the content of your documents will be available through
-        <code>http://w3c.github.io/$reponame/</code>. (This can sometimes take a minute.)
-      </p>
-      <p>
-        <a href="specs.html">Using GitHub for Spec Work</a> describes how to get started using this
-        method and starting with a template and ReSpec.
-      </p>
-      <p>
-        Alternatively, you can continue to use the <code>master</code> branch for development and
-        writing but <a
-        href="http://concord-consortium.github.io/developer-notes/automating-gh-pages-integration.html">use
-        a post-commit hook</a> to simultaneously push those changes to <code>gh-pages</code>.
-      </p>
-    </section>
-  </section>
   <section>
     <h2>W3C Integration</h2>
     <section>
