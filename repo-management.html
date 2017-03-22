@@ -25,17 +25,11 @@
 <main>
   <p>
     This document covers a tool that was created to support contributions made to a group, under the
-    form of pull requests, in order to assess whether they are IPR-OK or not. It still has some
-    rough edges but hopefully it can be usable enough to get started, and perfected over time. The
-    tool is informally known as “Ash-Nazg”.
+    form of pull requests, in order to assess whether they are IPR-OK or not. 
   </p>
   <p>
     The tool is at:
-    <a href="https://labs.w3.org/hatchery/ash-nazg/">https://labs.w3.org/hatchery/ash-nazg/</a>.
-  </p>
-  <p>
-    I assume that at some point it will move to a more palatable URL. For the time being, that's
-    what links are for.
+    <a href="https://labs.w3.org/hatchery/repo-manager/">https://labs.w3.org/hatchery/repo-manager/</a>.
   </p>
   <p>
     When you get there, you will be asked to log in through GitHub. You can't do anything without
@@ -43,18 +37,12 @@
     undertake on your behalf when reacting to a GitHub event) require authorised access to GitHub.
   </p>
   <p>
-    After you log in for the first time, please email me with your username and I will make you an
-    admin, which will give you access to some of the stuff I talk about below that you won't see at
-    first.
-  </p>
-  <p>
     There are several tools of use:
   </p>
   <section>
     <h3>New Repository</h3>
     <p>
-      This is basically what people should use when they want to start a new specification with the
-      CG. It gives you a choice of the organisations under which you are allowed to create a new
+      This is basically what people should use when they want to start a new specification in a CG or a WG. It gives you a choice of the organisations under which you are allowed to create a new
       repo (including your own user), and you can pick the name of the repo and the group(s) to
       which it belongs.
     </p>
@@ -98,9 +86,9 @@
   <section>
     <h3>How Pull Requests Get Handled</h3>
     <p>
-      Whenever a pull request is made against a repo that is under the tool's management, we get
-      notified. We use this information to assess if the PR is acceptable (i.e. has all its
-      contributors in at least one of the groups that the repo belongs to).
+      Whenever a pull request is made against a repo that is under the tool's management,the tool gets
+      notified. It uses this information to assess if the PR is acceptable (i.e. all its
+      contributors have made the relevant IPR commitment).
     </p>
     <p>
       Count as contributors not just the person making the pull request, but also anyone added
@@ -114,6 +102,9 @@
       it gets changed to some ugly brown with a red cross (and a link that people can use to check
       the issue in more detail).
     </p>
+    <p>On the page that explains the IPR failure, one can mark a given Pull Request as non-substantive: this will post a comment on the pull request under the name of the user, and will clear the flag for the said pull request.</p>
+
+    <p>When a pull requets gets flagged as not OK by the tool, it will attempt to notify the github users listed in the <a href="w3c.json.html#contacts"><code>contacts</code> property of the <code>w3c.json</code> file in the repo.</p>
   </section>
 
   <hr>
@@ -136,17 +127,17 @@
     <h3>PR Details</h3>
     <p>
       If the PR is not in an acceptable state, this will list problematic users with a link to fix
-      them each. The fix can either be "Add to system" or "Edit" (details below).
+      them each, and alternatively a button to "Mark the PR as non-substantive".</p>
+      <p>For problematic users, the fix can either be  "Add to system" or "Edit" (details below).
     </p>
     <p>
-      The idea is that the vast majority of non-acceptable PRs in the first few weeks will come from
-      people who are simply not known, but that relatively quickly it ought to become a less
-      frequent occurrence.
+      The idea is that the vast majority of non-acceptable PRs for a newly added repo will come from
+      people who are simply not known.
     </p>
     <p>
       If it so happens that all of the problematic users can be added to the system or to the right
       group, and that you have done so, then you can return to the PR details page and hit
-      "Revalidate". We could revalidate every time a user is added or edited, but it's pretty costly
+      "Revalidate". We could <a href="https://github.com/w3c/ash-nazg/issues/26">revalidate every time a user is added or edited</a>, but it's pretty costly
       so for the time being it is done this way. Revalidation will of course update both the local
       state and the PR's mergability indicator on GitHub.
     </p>
@@ -216,15 +207,8 @@
       group one of those available for repos and users to belong to.
     </p>
     <p>
-      Ok, that's it for now. I know it's a fair bit to swallow at once. I invite you to play with
-      the system a bit by creating your own test repos, PRs, etc. Don't forget to ping me when
-      you've logged in so I can make you admin.
-    </p>
-    <p>
-      Hopefully there aren't too many bugs. The source is at <a
-      href="https://github.com/w3c/ash-nazg">https://github.com/w3c/ash-nazg</a>. One of the
-      important next steps is to write some actual documentation for it, including how to hack it
-      and install it.
+      The source is at <a
+      href="https://github.com/w3c/ash-nazg">https://github.com/w3c/ash-nazg</a>. 
     </p>
   </section>
 </main>
