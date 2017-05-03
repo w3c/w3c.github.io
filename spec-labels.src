@@ -48,6 +48,8 @@
     <dd>The specification could be improved</dd>
     <dt>help wanted</dt>
     <dd>The editor and/or Group need to resolve this issue</dd>
+    <dt>next version</dt>
+    <dd>The issue does not need to be addressed for the current version of the specification, but should be addressed for the next.</dd>
     <dt>invalid</dt>
     <dd>This issue or pull request was declared out of scope</dd>
     <dt>duplicate</dt>
