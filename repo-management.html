@@ -32,15 +32,14 @@
     <a href="https://labs.w3.org/hatchery/repo-manager/">https://labs.w3.org/hatchery/repo-manager/</a>.
   </p>
   <p>
-    When you get there, you will be asked to log in through GitHub. You can't do anything without
-    that, because most of the actions you can undertake through the tool (or that the tool can
-    undertake on your behalf when reacting to a GitHub event) require authorised access to GitHub.
+    A number of operations in the tool require logging in through GitHub as the related actions you can undertake through the tool (or that the tool can
+    undertake on your behalf when reacting to a GitHub event) require authorized access to GitHub.
   </p>
   <p>
     There are several tools of use:
   </p>
   <section>
-    <h3>New Repository</h3>
+    <h3>New Repository <span class=acl>login required</span></h3>
     <p>
       This is basically what people should use when they want to start a new specification in a CG or a WG. It gives you a choice of the organisations under which you are allowed to create a new
       repo (including your own user), and you can pick the name of the repo and the group(s) to
@@ -71,16 +70,10 @@
     </p>
   </section>
   <section>
-    <h3>Import Repository</h3>
+    <h3>Import Repository <span class=acl>login required</span></h3>
     <p>
       This is the same as "New" but for an existing repo. It will *never* overwrite something there
       so it is the user's responsibility to check that the repo is okay.
-    </p>
-  </section>
-  <section>
-    <h3>Logout</h3>
-    <p>
-      This should be obvious.
     </p>
   </section>
   <section>
@@ -143,7 +136,7 @@
     </p>
   </section>
   <section>
-    <h3>Add User to system</h3>
+    <h3>Add User to system <span class=acl>login required</span></h3>
     <p>
       For users that are unknown to the system, they can be added by following on of those links and
       just clicking that button. This is always an innocuous operation; it does not give the user
@@ -161,7 +154,7 @@
     </p>
   </section>
   <section>
-    <h3>Edit User</h3>
+    <h3>Edit User <span class=acl>login required</span></h3>
     <p>
       The interface to edit users is where the W3C data model and the GitHub data model get to meet.
       This alone is scary; I've tried to make it less scary.
@@ -181,7 +174,7 @@
     </p>
   </section>
   <section>
-    <h3>Admin > Users</h3>
+    <h3>Admin > Users <span class=acl>admin required</span></h3>
     <p>
       This is a list of users. Things you can do there include making them admins and giving them
       blanket contribution rights. <strong>USE EITHER WITH CARE</strong>.
@@ -198,7 +191,7 @@
     </p>
   </section>
   <section>
-    <h3>Admin > Groups</h3>
+    <h3>Admin > Groups <span class=acl>admin required</span></h3>
     <p>
       This is a list of all W3C groups. You will note that most have an "Add" button next to them:
       those are the ones that are in W3C but not in this system. Please do *not* start adding groups

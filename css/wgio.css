@@ -65,3 +65,9 @@ footer > p {
         margin-right: 20px;
     }    
 }
+.acl {
+    font-size: 0.8em;
+    font-variant: small-caps;
+    background-color: #ddd;
+    border-radius: 5px;
+}
