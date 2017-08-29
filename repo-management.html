@@ -98,13 +98,11 @@
     <p>On the page that explains the IPR failure, one can mark a given Pull Request as non-substantive: this will post a comment on the pull request under the name of the user, and will clear the flag for the said pull request.</p>
 
     <p>When a pull requets gets flagged as not OK by the tool, it will attempt to notify the github users listed in the <a href="w3c.json.html#contacts"><code>contacts</code></a> property of the <code>w3c.json</code> file in the repo.</p>
+
+     <p>When it gets flagged as not OK because the contributor could not be automatically associated with a W3C profile, the contributor will also be notified to ask them to <a href="https://www.w3.org/users/myprofile/connectedaccounts">connect their W3C & GitHub accounts</a>.</p<
   </section>
 
   <hr>
-  <p>
-    The following are only available to admins.
-  </p>
-
   <section>
     <h3>Currently Open Pull Requests</h3>
     <p>
@@ -119,28 +117,15 @@
   <section>
     <h3>PR Details</h3>
     <p>
-      If the PR is not in an acceptable state, this will list problematic users with a link to fix
+      If the PR is not in an acceptable state, this will list problematic users with possible options to fix
       each of them, and a button to "Mark the PR as non-substantive".</p>
-      <p>For problematic users, the fix can either be  "Add to system" or "Edit" (details below).
+    <p>
+      The vast majority of non-acceptable PRs for a newly added repo will come from people whose W3C profile is not known (and thus neither are their affiliation and associated IPR commitments).
     </p>
     <p>
-      The idea is that the vast majority of non-acceptable PRs for a newly added repo will come from
-      people who are simply not known.
-    </p>
-    <p>
-      If all problematic users are added to the system and
-       group, return to the PR details page and hit
-      "Revalidate". We could <a href="https://github.com/w3c/ash-nazg/issues/26">revalidate every time a user is added or edited</a>, but it's pretty costly
-      so for the time being it is done this way. Revalidation will of course update both the local
+      When all problematic users have had their W3C profile associated, return to the PR details page and hit
+      "Revalidate". We hope in the future to <a href="https://github.com/w3c/ash-nazg/issues/26">revalidate every time a user is added or edited</a>. Revalidation will of course update both the local
       state and the PR's mergability indicator on GitHub.
-    </p>
-  </section>
-  <section>
-    <h3>Add User to system <span class=acl>login required</span></h3>
-    <p>
-      For users that are unknown to the system, they can be added by following on of those links and
-      just clicking that button. This is always an innocuous operation; it does not give the user
-      any special rights nor can it make a PR OK (since the user needs to be in a group for that).
     </p>
   </section>
   <section>
@@ -155,6 +140,8 @@
   </section>
   <section>
     <h3>Edit User <span class=acl>login required</span></h3>
+    <p>In most cases, this interface will not be needed - it is only useful for cases where it is not possible or practical for a GitHub user to <a href="https://www.w3.org/users/myprofile/connectedaccounts">associate their GitHub account with their W3C account</a>.</p>
+
     <p>
       The interface to edit users is where the W3C data model and the GitHub data model get to meet.
       This alone is scary; I've tried to make it less scary.
@@ -167,10 +154,6 @@
       (which may not always work, but often does). Hitting "OK" will associate the GH user with the
       W3C user, making it possible for us to use affiliation information. Don't forget to hit
       "Save".
-    </p>
-    <p>
-      This is a little convoluted but it's the best I could do with the current APIs from both
-      GitHub and the W3C backend. Hopefully it can be simplified in the future.
     </p>
   </section>
   <section>
