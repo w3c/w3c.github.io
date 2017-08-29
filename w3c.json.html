@@ -52,16 +52,19 @@
     </dd>
     <dt id=contacts><code>contacts</code></dt>
     <dd>
-      An array of people who are considered points of contact for the repository for 
+      An array of people who are considered points of contact for the repository for
       administrative requests. They aren't necessarily the primary contributor and they aren't
       necessarily from the W3C Team. Whatever works for any given repository is acceptable.
       For integration purposes, please use your <em>GitHub</em> ID.
     </dd>
     <dt><code>shortName</code></dt>
     <dd>
-      If the repository contains a specification, this is its short name (as in
-      http://www.w3.org/TR/shortname/). This allows for automatic linking between repositories
-      and the published specification.
+      This field is somewhat redundant, for historic reasons.
+      The <a href="https://labs.w3.org/hatchery/repo-manager/">Repository Manager</a> was
+      supposed to use it to track <em>spec</em> &ldquo;shortnames&rdquo; (as in
+      <code>https://www.w3.org/TR/&lt;shortname&gt;</code>).
+      In practice, it is expected to contain the <em>GitHub</em> project name (ie, the
+      name immediately after <code>https://github.com/w3c/</code>).
     </dd>
     <dt><code>policy</code></dt>
     <dd>
