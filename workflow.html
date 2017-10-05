@@ -1,0 +1,148 @@
+<!--
+  CAUTION: This is auto-generated; edit the .src instead.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Workflow for editors and other contributors</title>
+    <link rel="stylesheet" href="css/wgio.min.css">
+    <link rel="icon" type="image/x-icon" href="//labs.w3.org/favicon.ico">
+  </head>
+  <body>
+    <header>
+      <h1>Workflow for editors and other contributors</h1>
+    </header>
+<nav>
+  <a href="index.html">Home</a>
+  •
+  <a href="https://github.com/w3c/">Repositories</a>
+  •
+  <a href="https://help.github.com/">GitHub Help</a>
+</nav>
+
+<main>
+      <p>
+        A good practice for GitHub is to use <a href="https://help.github.com/articles/about-pull-requests/">pull requests</a>.
+        It lets you tell others about changes you've pushed to the repository.
+        Once a pull request is opened, you can discuss and review the potential changes with
+        others and add follow-up commits before the changes are merged into the repository.
+      </p>
+  <ol>
+    <li>
+      <p>
+        Navigate to the repo.
+      </p>
+      <pre><code>cd specs-on-github</code></pre>
+    </li>
+    <li>
+      <p>
+        Checkout the main branch of your repository (in general, this is the <code>master</code> branch).
+      </p>
+      <pre><code>git checkout master</code></pre>
+    </li>
+    <li>
+      <p>
+        Make sure the main branch is up-to-date with upstream.
+      </p>
+      <pre><code>git pull</code></pre>
+    </li>
+    <li>
+      <p>
+        Create a new branch for your upcoming pull request (one branch per pull request). Please make branch names
+        informative - by including the issue or bug number for example.
+      </p>
+      <pre><code>git checkout -B my-wonderful-edits-for-87</code></pre>
+    </li>
+    <li>
+      <p>
+        Make your edits in your favorite editor.
+      </p>
+    </li>
+    <li>
+      <p>
+        Add your edits to prepare your commit by staging them. Best is to use the interactive mode (New files still
+        need to be added explictly).
+      </p>
+      <pre><code>git add -p</code></pre>
+      <p>If you ignore an edit, it will be reproposed to you the next time you run the command. This allow you to make
+      multiple edits at once and split them into different more meaningfull/easy-to-review commits.</p>
+    </li>
+    <li>
+      <p>
+        Commit your staged edits. If you're fixing an issue, reference it in the commit e.g. <code>#87</code>
+        (it will automatically close the issue once the commit is added in the main branch).
+      </p>
+      <pre><code>git commit -m "&lt;purpose of your edits>"</code></pre>
+    </li>
+    <li>
+      <p>
+        Once all your commits are done, push your branch upstream.
+      </p>
+      <pre><code> git push --set-upstream origin my-wonderful-edits-for-87</code></pre>
+    </li>
+    <li>
+      <p>
+        Using your favorite browser, navigate to the repo on GitHub, e.g.
+      </p>
+      <pre><code>https://github.com/tobie/specs-on-github/</code></pre>
+    </li>
+    <li>
+      <p>
+        Once your anthenticated on the repo page, a new button should appear on the page to create a new
+        pull request (<code>Compare &amp; pull request</code>). Go ahead and punch it.
+      </p>
+      <p><img src="img/create-a-pr.png" alt="Compare &amp; pull request" /></p>
+    </li>
+    <li>
+      <p>
+        Make sure you like the title of your pull request, add a proper description, and use
+        <a href="spec-labels.html">proper GitHub labels</a>, add one or more reviewers so they get pinged.
+        Once you're satisfied, create the pull request. Note that you can update all of those information
+        after that if needed.
+      </p>
+    </li>
+    <li>
+     <p>
+       ALL normative spec changes are generally expected to have a corresponding pull request in
+       <a href="https://github.com/w3c/web-platform-tests/">web-platforms-tests</a>,
+       either in the form of new tests or modifications to existing tests, or must include the rationale for why test
+       updates are not required for the proposed update.
+     </p>
+     <p>
+       Typically, both pull requests (spec updates and tests) will be merged at the same time. If a pull request
+       for the specification is approved but the other needs more work, add the
+       '<a href="https://w3c.github.io/spec-labels.html">needs tests</a>' label or,
+       in web-platform-tests, the
+       '<a href="https://github.com/w3c/web-platform-tests/issues?utf8=%E2%9C%93&q=label%3Astatus%3Aneeds-spec-decision%20">status:needs-spec-decision</a>'
+       label. Note that a test change that contradicts
+       the specification should not be merged before the corresponding specification change.
+     </p>
+     <p>
+       If testing is not practical due to <a href="https://github.com/w3c/web-platform-tests/">web-platforms-tests</a> limitations,
+       please explain why and if appropriate file an issue with the
+       '<a href="https://github.com/w3c/web-platform-tests/issues?utf8=%E2%9C%93&q=label%3Atype%3Auntestable%20">type:untestable</a>'
+       label to follow up later.
+     </p>
+    </li>
+    <li>
+      <p>
+        Wait for the needed reviews. All pull requests must have been reviewed by one or more participants of the working groups.
+        They can use approve changes, give you <code>+1</code>, comment, etc.
+      </p>
+    </li>
+    <li>
+      <p>
+        Once the pull request gets enough support, it can be merged (use the <code>Squash and merge</code> to avoid cluttering the commit history). Delete your ad-hoc branch <code>my-wonderful-edits-for-87</code>. You're done.
+      </p>
+    </li>
+  </ol>
+</main>
+    <footer>
+      <p>
+        <a href="https://w3.org/"><img src="img/w3c.svg" width="65" height="45" alt="W3C Logo"></a>
+      </p>
+    </footer>
+  </body>
+</html>
