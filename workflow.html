@@ -47,6 +47,9 @@
         Make sure the main branch is up-to-date with upstream.
       </p>
       <pre><code>git pull</code></pre>
+      <p>
+        If you forked the repository on GitHub, you may need to indicate the upstream repository more explicitely.
+      </p>
     </li>
     <li>
       <p>
@@ -62,19 +65,21 @@
     </li>
     <li>
       <p>
-        Add your edits to prepare your commit by staging them. Best is to use the interactive mode (New files still
-        need to be added explictly).
+        Add your edits to prepare your commit by <a href="https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging">staging</a> them.
+        This will help you to easily craft your commits to include only certain combinations and parts of files.
+        Best is to use the interactive patch mode (New files still need to be added explicitly), where you can select which change should
+        be part of the commit. This allows you to make  multiple edits at once and split them into different more
+        meaningful/easy-to-review commits.
       </p>
       <pre><code>git add -p</code></pre>
-      <p>If you ignore an edit, it will be reproposed to you the next time you run the command. This allow you to make
-      multiple edits at once and split them into different more meaningfull/easy-to-review commits.</p>
     </li>
     <li>
       <p>
-        Commit your staged edits. If you're fixing an issue, reference it in the commit e.g. <code>#87</code>
-        (it will automatically close the issue once the commit is added in the main branch).
+        Commit your staged edits. If you're fixing an issue, reference it in the commit e.g. <code>fix #87</code>
+        (if you write close or fix, it will automatically close the issue once the commit is added in the main branch).
       </p>
-      <pre><code>git commit -m "&lt;purpose of your edits>"</code></pre>
+      <pre><code>git commit -m "&lt;purpose of your edits> (fix #number)"</code></pre>
+      <p><code>git commit --amend</code> allows you to replace the last commit with a new one, if you feel the need to change it.</p>
     </li>
     <li>
       <p>
@@ -90,16 +95,17 @@
     </li>
     <li>
       <p>
-        Once your anthenticated on the repo page, a new button should appear on the page to create a new
+        Once your authenticated on the repo page, a new button should appear on the page to create a new
         pull request (<code>Compare &amp; pull request</code>). Go ahead and punch it.
       </p>
       <p><img src="img/create-a-pr.png" alt="Compare &amp; pull request" /></p>
     </li>
     <li>
       <p>
-        Make sure you like the title of your pull request, add a proper description, and use
+        Make sure you like the title of your pull request, add a proper description (including mentioning the contributors with
+        <a href="https://github.com/w3c/licenses/blob/master/SW-CONTRIBUTING.md">"+@username"</a>), and use
         <a href="spec-labels.html">proper GitHub labels</a>, add one or more reviewers so they get pinged.
-        Once you're satisfied, create the pull request. Note that you can update all of those information
+        Once you're satisfied, create the pull request. Note that you can update all of that information
         after that if needed.
       </p>
     </li>
@@ -128,8 +134,9 @@
     </li>
     <li>
       <p>
-        Wait for the needed reviews. All pull requests must have been reviewed by one or more participants of the working groups.
-        They can use approve changes, give you <code>+1</code>, comment, etc.
+        Wait for the needed reviews. All pull requests must have been reviewed by one or more participants of the working group.
+        They can use approve changes, give you <code>+1</code>, comment, etc. You made need to make additional commits in your branch and push them
+        again in order to address the review. The pull request will keep tradcking the branch so it will get automatically updated with the new commits.
       </p>
     </li>
     <li>
