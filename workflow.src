@@ -109,7 +109,8 @@
        If testing is not practical due to <a href="https://github.com/w3c/web-platform-tests/">web-platforms-tests</a> limitations,
        please explain why and if appropriate file an issue with the
        '<a href="https://github.com/w3c/web-platform-tests/issues?utf8=%E2%9C%93&q=label%3Atype%3Auntestable%20">type:untestable</a>'
-       label to follow up later.
+       label to follow up later. For tests that aren't ready for the specification, you may use the <a
+       href="http://web-platform-tests.org/writing-tests/file-names.html#test-features"><code>.tentative</code> filename convention</a>.
      </p>
     </li>
     <li>
