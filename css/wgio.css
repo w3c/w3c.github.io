@@ -53,11 +53,16 @@ dd {
 }
 footer {
     background: #648ff1;
+    color: white;
     margin-top: 100px;
 }
 footer > p {
     margin-bottom: 0;
     text-align: right;
+}
+footer a, footer a:visited, footer a:focus, footer a:hover {
+    color: white;
+    font-weight: bold;
 }
 @media (max-width: 840px) {
     header > h1, body > p, body > nav, body > main, body > section, footer > p {
