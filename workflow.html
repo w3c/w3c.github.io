@@ -25,7 +25,7 @@
 <main>
       <p>
         A good practice for GitHub is to use <a href="https://help.github.com/articles/about-pull-requests/">pull requests</a>.
-        It lets you tell others about changes you've pushed to the repository.
+        It lets you propose changes to others without making changes to the master branch of the repository.
         Once a pull request is opened, you can discuss and review the potential changes with
         others and add follow-up commits before the changes are merged into the repository.
       </p>
@@ -56,7 +56,7 @@
         Create a new branch for your upcoming pull request (one branch per pull request). Please make branch names
         informative - by including the issue or bug number for example.
       </p>
-      <pre><code>git checkout -B my-wonderful-edits-for-87</code></pre>
+      <pre><code>git checkout -b my-wonderful-edits-for-87</code></pre>
     </li>
     <li>
       <p>
@@ -67,7 +67,7 @@
       <p>
         Add your edits to prepare your commit by <a href="https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging">staging</a> them.
         This will help you to easily craft your commits to include only certain combinations and parts of files.
-        Best is to use the interactive patch mode (New files still need to be added explicitly), where you can select which change should
+        Best is to use the interactive patch mode (new files still need to be added explicitly), where you can select which change should
         be part of the commit. This allows you to make  multiple edits at once and split them into different more
         meaningful/easy-to-review commits.
       </p>
@@ -76,7 +76,7 @@
     <li>
       <p>
         Commit your staged edits. If you're fixing an issue, reference it in the commit e.g. <code>fix #87</code>
-        (if you write close or fix, it will automatically close the issue once the commit is added in the main branch).
+        (if you write close or fix, it will automatically close the issue once the commit is added to the main branch).
       </p>
       <pre><code>git commit -m "&lt;purpose of your edits> (fix #number)"</code></pre>
       <p><code>git commit --amend</code> allows you to replace the last commit with a new one, if you feel the need to change it.</p>
@@ -111,7 +111,7 @@
     </li>
     <li>
      <p>
-       ALL normative spec changes are generally expected to have a corresponding pull request in
+       All normative spec changes are generally expected to have a corresponding pull request in
        <a href="https://github.com/w3c/web-platform-tests/">web-platforms-tests</a>,
        either in the form of new tests or modifications to existing tests, or must include the rationale for why test
        updates are not required for the proposed update.
@@ -129,27 +129,29 @@
        If testing is not practical due to <a href="https://github.com/w3c/web-platform-tests/">web-platforms-tests</a> limitations,
        please explain why and if appropriate file an issue with the
        '<a href="https://github.com/w3c/web-platform-tests/issues?utf8=%E2%9C%93&q=label%3Atype%3Auntestable%20">type:untestable</a>'
-       label to follow up later.
+       label to follow up later. For tests that aren't ready for the specification, you may use the <a
+       href="http://web-platform-tests.org/writing-tests/file-names.html#test-features"><code>.tentative</code> filename convention</a>.
      </p>
     </li>
     <li>
       <p>
         Wait for the needed reviews. All pull requests must have been reviewed by one or more participants of the working group.
-        They can use approve changes, give you <code>+1</code>, comment, etc. You made need to make additional commits in your branch and push them
+        They can use approve changes, give you <code>+1</code>, comment, etc. You may need to make additional commits in your branch and push them
         again in order to address the review. The pull request will keep tracking the branch so it will get automatically updated with the new commits.
       </p>
     </li>
     <li>
       <p>
-        Once the pull request gets enough support, it can be merged (use the <code>Squash and merge</code> to avoid cluttering the
-        commit history). Delete your ad-hoc branch <code>my-wonderful-edits-for-87</code>. You're done.
+        Once the pull request gets enough support, it can be merged (you should use the <code>Squash and merge</code> to avoid cluttering the
+        commit history and consider cleaning up the commit message). Delete your ad-hoc branch <code>my-wonderful-edits-for-87</code>. You're done.
       </p>
     </li>
   </ol>
 </main>
     <footer>
+      <address><a href="https://github.com/w3c/w3c.github.io/">We are on GitHub</a></address>
       <p>
-        <a href="https://w3.org/"><img src="img/w3c.svg" width="65" height="45" alt="W3C Logo"></a>
+        <a href="https://www.w3.org/"><img src="img/w3c.svg" width="65" height="45" alt="W3C Logo"></a>
       </p>
     </footer>
   </body>
