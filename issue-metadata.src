@@ -18,17 +18,17 @@
     <dt>security</dt>
     <dd>Affect the <a href='https://www.w3.org/TR/security-privacy-questionnaire/'>degree of resistance</a> to, or protection from, harm of Web technologies.</dd>
     <dt>privacy</dt>
-    <dd>affect the collection, <a href='https://w3c.github.io/fingerprinting-guidance/'>processing</a> and  <a href='https://www.w3.org/TR/security-privacy-questionnaire/'>publication of personal data</a> in Web technologies.</dd>
+    <dd>Affect the collection, <a href='https://w3c.github.io/fingerprinting-guidance/'>processing</a> and  <a href='https://www.w3.org/TR/security-privacy-questionnaire/'>publication of personal data</a> in Web technologies.</dd>
     <dt>a11y</dt>
-    <dd>affect the design of Web technologies for people with disabilities.</dd>
+    <dd>Affect the design of Web technologies for people with disabilities.</dd>
     <dt>i18n</dt>
-    <dd>affect the <a href='https://www.w3.org/International/review-request'>adaptation of Web technologies to different languages or regional differences</a>.</dd>
+    <dd>Affect the <a href='https://www.w3.org/International/review-request'>adaptation of Web technologies to different languages or regional differences</a>.</dd>
     <dt>architecture</dt>
-    <dd>affect the <a href='https://w3ctag.github.io/design-principles/'>underlying principles</a> that should be adhered to by all Web technologies.</dd>
+    <dd>Affect the <a href='https://w3ctag.github.io/design-principles/'>underlying principles</a> that should be adhered to by all Web technologies.</dd>
     <dt>performance</dt>
-    <dd>affect the download and display speed of Web technologies.</dd>
+    <dd>Affect the download and display speed of Web technologies.</dd>
     <dt>device independence</dt>
-    <dd>affect the ability of Web technologies to function on a wide variety of devices.</dd>
+    <dd>Affect the ability of Web technologies to function on a wide variety of devices.</dd>
   </dl>
   <h3>Testing and Implementations</h3>
   <p>Those labels are meant to track testing and implementation status.</p>
