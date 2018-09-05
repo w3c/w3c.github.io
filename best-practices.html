@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Best practices and recommended tools</title>
+        <link rel="stylesheet" href="css/wgio.css" />
+        <link rel="icon" type="image/x-icon" href="//labs.w3.org/favicon.ico" />
+    </head>
+    
+    <body>
+      
+        <header>
+            <h1>Best practices and recommended tools</h1>
+        </header>
+        
+        <nav>
+            <a href="/">Home</a>
+            •
+            <a href="https://github.com/w3c/">Repositories</a>
+            •
+            <a href="https://help.github.com/">GitHub Help</a>
+        </nav>
+
+        <nav class="internal">
+            <ul>
+                <li>
+                    <a href="#all">For all GitHub users</a>
+                    <ul>
+                        <li><a href="#notifications">Make sure you receive notifications</a></li>
+                        <li><a href="#branches">Delete your branches soon</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#maintainers">For project maintainers</a>
+                    <ul>
+                        <li>
+                            <a href="#setup">Set up the repository well</a>
+                            <ul>
+                                <li><a href="#settings">Set common settings</a></li>
+                                <li><a href="#fields">Fill in common fields</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#metadata">Include sufficient metadata</a>
+                            <ul>
+                                <li><a href="#git">Git special files</a></li>
+                                <li><a href="#boilerplate">GitHub boilerplate files</a></li>
+                                <li><a href="#w3c">W3C-specific metadata</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#vulns">Make sure you receive vulnerability alerts</a></li>
+                        <li><a href="#ci">Set up <abbr title="continuous integration">CI</abbr></a></li>
+                        <li><a href="#branches2">Patrol branches often</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="all">
+                <h2>For all GitHub users <a href="#all">&#x1F517;</a></h2>
+                <section id="notifications">
+                    <h3>Make sure you receive notifications <a href="#notifications">&#x1F517;</a></h3>
+                    <p>It is recommended that all users automatically subscribe to
+                        <a href="https://help.github.com/articles/managing-your-notifications/">notifications</a> from new W3C repositories.
+                        If/when a new repository is of no interest to them, the user can easily unsubscribe from it.</p>
+                    <p>The &ldquo;danger&rdquo; of missing important notifications if one does not subscribe to all of them is higher than the slight annoyance
+                        of having to manually unsubscribe from (most) new repositories every time.</p>
+                    <p>Users can choose whether to receive those notifications via e-mail, as alerts on the web UI of GH, or in both ways at the same time.</p>
+                    <p>Set up automatic watching of new repositories here:
+                        <a href="https://github.com/settings/notifications"><code>github.com/settings/notifications</code></a>.
+                        If you receive too much noise, prune list of repositories that you watch here:
+                        <a href="https://github.com/watching"><code>github.com/watching</code></a>.</p>
+                    <p><strong>Repository maintainers should <em>always</em> watch their repositories</strong> and respond to changes, issues, PRs, etc.</p>
+                </section>
+                <section id="branches">
+                    <h3>Delete your branches soon <a href="#branches">&#x1F517;</a></h3>
+                    <p>Branches you create to submit PRs should be deleted as soon as the PR is resolved (either merged or closed for other reasons).
+                        Make a point of deleting a branch when you see its corresponding PR has been merged.</p>
+                    <p>To remove old branches from your clone of the repo, run this Git command from time to time:</p>
+                    <pre>$ git remote prune origin</pre>
+                </section>
+            </section>
+            <section id="maintainers">
+                <h2>For project maintainers <a href="#maintainers">&#x1F517;</a></h2>
+                <section id="setup">
+                    <h3>Set up the repository well <a href="#setup">&#x1F517;</a></h3>
+                    <section id="settings">
+                        <h4>Set common settings <a href="#settings">&#x1F517;</a></h4>
+                        <p>Review <code>https://github.com/w3c/&lt;REPO&gt;/settings</code>:</p>
+                        <ul>
+                            <li>Does your project use <strong>wikis</strong> or <strong>projects</strong>? If not, disabling those options will reduce some
+                                cognitive load, un-clutter the web UI, and prevent absent-minded collaborators from contributing wiki pages or other stuff that
+                                nobody is using nor paying attention to.</li>
+                            <li>Set up <strong>GitHub Pages</strong> if necessary; select the right branch for that.</li>
+                            <li>In <code>https://github.com/w3c/&lt;REPO&gt;/settings/branches</code>, make sure the <strong>default branch</strong> is
+                                <code>master</code>.</li>
+                            <li>In <code>https://github.com/w3c/&lt;REPO&gt;/settings/installations</code>, under <em>Services</em>, you may want to add a handy
+                                <strong>service</strong>; like an IRC notifier, or a Twitter bridge (depending on the nature of your repository, of course).</li>
+                        </ul>
+                    </section>
+                    <section id="fields">
+                        <h4>Fill in common fields <a href="#fields">&#x1F517;</a></h4>
+                        <p>In particular, the three fields that appear at the top of the main page of the repo: <strong>description</strong> (something short),
+                            <strong>website</strong> (often pointing to GitHub Pages) and <strong>topics</strong> (tags).</p>
+                        <p>Check out how those are set up <a href="https://github.com/w3c/echidna">in Echidna</a>, for example.</p>
+                    </section>
+                </section>
+                <section id="metadata">
+                    <h3>Include sufficient metadata <a href="#metadata">&#x1F517;</a></h3>
+                    <section id="git">
+                        <h4>Git special files <a href="#git">&#x1F517;</a></h4>
+                        <p>Have a <a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_ignoring"><code>.gitignore</code></a>
+                            (hidden file) in the root directory of your repo to list files and directories that you do <em>not</em> want to keep under version
+                            control.
+                            Typically something along the lines of:</p>
+                        <pre>node_modules/
+npm-debug.log
+logs/</pre>
+                        <p>See <a href="https://github.com/w3c/Eunomia/blob/master/.gitignore">an example</a>.</p>
+                        <p>Ideally, <strong>this file should <em>not</em> contain filenames or patterns that are associated to specific OS's, IDE's or
+                            editors</strong>; eg <code>.DS_Store</code> (MacOS), <code>Thumbs.db</code> (Windows), <code>*~</code> (emacs).
+                            The other contributors don't need to know about the different types of droppings your tools produce, and there are cleaner ways to
+                            ignore files <em>locally</em>, like
+                            <a href="https://git-scm.com/docs/git-config#git-config-coreexcludesFile">configuring your Git to do so</a>.</p>
+                    </section>
+                    <section id="boilerplate">
+                        <h4>GitHub boilerplate files <a href="#boilerplate">&#x1F517;</a></h4>
+                        <p>To keep the root directory of the repository clean and manageable, store as many metadata files under <code>.github/</code> as
+                            possible.
+                            In decreasing order of importance, you may want to have these files:</p>
+                        <ul>
+                            <li><a href="https://help.github.com/articles/about-readmes/"><code>README.md</code></a></li>
+                            <li><a href="https://help.github.com/articles/adding-a-license-to-a-repository/"><code>LICENSE.md</code></a></li>
+                            <li><a href="https://help.github.com/articles/setting-guidelines-for-repository-contributors/"><code>CONTRIBUTING.md</code></a></li>
+                            <li><a href="https://help.github.com/articles/about-issue-and-pull-request-templates/"><code>ISSUE_TEMPLATE.md</code> and
+                                <code>PULL_REQUEST_TEMPLATE.md</code></a></li>
+                            <li><a href="https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/"><code>CODE_OF_CONDUCT.md</code></a></li>
+                        </ul>
+                        <p>See <a href="https://github.com/w3c/Eunomia/tree/master/.github">an example</a>.</p>
+                    </section>
+                    <section id="w3c">
+                        <h4>W3C-specific metadata <a href="#w3c">&#x1F517;</a></h4>
+                        <p>Usually applicable only to repositories containing specs (<em>not</em> software).</p>
+                        <p>See <a href="w3c.json.html">the <code>w3c.json</code> file</a>.</p>
+                    </section>
+                </section>
+                <section id="vulns">
+                    <h3>Make sure you receive vulnerability alerts <a href="#vulns">&#x1F517;</a></h3>
+                    <p>Usually applicable only to repositories containing software (<em>not</em> specs), and assuming the language/platform detected in the
+                        repository is understood and supported by GitHub; find out
+                        <a href="https://help.github.com/articles/about-security-alerts-for-vulnerable-dependencies/">in their help pages</a>.</p>
+                    <p>Enable vulnerability alerts in settings, here:</p>
+                    <pre>https://github.com/w3c/&lt;REPO&gt;/settings#vulnerability-alerts-feature</pre>
+                    <p>Once enabled, vulnerabilities will be shown highlighted in two places:</p>
+                    <ul>
+                        <li>At the top of the main page of the repo; ie <code>https://github.com/w3c/&lt;REPO&gt;</code></li>
+                        <li>On the <em>Dependency Graph</em> page; ie <code>https://github.com/w3c/&lt;REPO&gt;/network/dependencies</code></li>
+                    </ul>
+                    <p>Finally, make sure you are receiving <em>notifications</em> about vulnerability alerts:
+                        <a href="https://github.com/settings/notifications"><code>github.com/settings/notifications</code></a> (bottom of the page).</p>
+                </section>
+                <section id="ci">
+                    <h3>Set up <abbr title="continuous integration">CI</abbr> <a href="#ci">&#x1F517;</a></h3>
+                    <p><a href="https://travis-ci.com/">Travis CI</a> is our recommended tool to do CI; check out
+                        <a href="https://travis-ci.org/w3c/">our repos there</a>.</p>
+                    <p>A particular example of Travis configuration (see links below for more information):</p>
+                    <pre>language: node_js
+node_js:                            # ☞ “Building a JavaScript and Node.js project”
+  - "8"
+  - "10"
+before_install:                     # ☞ “Build Stages”
+  - npm install -g npm@latest
+before_script:
+  - cp config.js.example config.js
+script:
+  - npm run build
+after_script:
+  - npm run coveralls
+notifications:                      # ☞ “Configuring Build Notifications”
+  email: false
+  irc:
+    channels:
+      - "irc.w3.org#pub"
+    skip_join: true
+    template:
+      - "%{branch} by %{author} (%{build_url}): %{message}"</pre>
+                    <p>Travis CI help pages referenced above:</p>
+                    <ul>
+                        <li><a href="https://docs.travis-ci.com/user/languages/javascript-with-nodejs/">Building a JavaScript and Node.js project</a></li>
+                        <li><a href="https://docs.travis-ci.com/user/build-stages/">Build Stages</a></li>
+                        <li><a href="https://docs.travis-ci.com/user/notifications/">Configuring Build Notifications</a></li>
+                    </ul>
+                    <p>See <a href="https://travis-ci.org/w3c/echidna">an example of Travis report page</a>.</p>
+                    <p>The specifics of Travis configuration depend greatly on the language/platform and on the dependencies and tools involved.
+                        See <a href="https://docs.travis-ci.com/">the documentation</a> or browse existing repositories using Travis to learn more.</p>
+                </section>
+                <section id="branches2">
+                    <h3>Patrol branches often <a href="#branches2">&#x1F517;</a></h3>
+                    <p>See also <a href="#branches">Delete your branches soon</a>.</p>
+                    <p>From time to time, check the list of all branches in the project, <code>https://github.com/w3c/&lt;REPO&gt;/branches/all</code>, and
+                        delete the ones that aren't being used; branches that are <em>not</em> ahead of the default branch, and branches associated to PRs that
+                        are either <em>merged</em> or <em>closed</em> already, are definitely good candidates for removal.
+                        If in doubt, ask the author of the branch.</p>
+                </section>
+            </section>
+        </main>
+      
+        <footer>
+            <address><a href="https://github.com/w3c/w3c.github.io/">We are on GitHub</a></address>
+            <p><a href="https://www.w3.org/"><img src="img/w3c.svg" width="65" height="45" alt="W3C Logo"></a></p>
+        </footer>
+
+    </body>
+
+</html>

@@ -1,5 +1,4 @@
-
-@import "../node_modules/normalize.css/normalize.css";
+@import "normalize.css";
 @import "fonts.css";
 
 html {
@@ -8,10 +7,14 @@ html {
 header {
     border-bottom: 1px solid silver;
 }
-header > h1, body > p, body > section, body > main, body > nav, footer > p {
+header > h1, body > p, body > main, body > nav, footer > address, footer > p {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+section {
+    margin-top: .25rem;
+    padding: .5rem;
 }
 h1 {
     color: #648ff1;
@@ -22,6 +25,10 @@ h1 {
 nav {
     text-align: right;
     font-weight: bold;
+}
+nav.internal {
+    text-align: left;
+    font-weight: normal;
 }
 main {
     margin-top: 50px;
@@ -42,8 +49,10 @@ h2 {
     padding-left: 5px;
     margin-left: -20px;
 }
-section {
-    margin-top: 50px
+h2 a, h3 a {
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: 300;
 }
 dt {
     font-weight: bold;
@@ -75,4 +84,18 @@ footer a, footer a:visited, footer a:focus, footer a:hover {
     font-variant: small-caps;
     background-color: #ddd;
     border-radius: 5px;
+}
+:target {
+    animation-duration: 2s;
+    animation-name: highlight;
+}
+@keyframes highlight {
+    0%, 50% {
+        box-shadow: 0 0 4rem #648ff1;
+        /*background-color: #648ff1;*/
+    }
+    to {
+        box-shadow: none;
+        /*background-color: none;*/
+    }
 }
