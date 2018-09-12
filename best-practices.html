@@ -10,7 +10,7 @@
         <link rel="icon" type="image/x-icon" href="//labs.w3.org/favicon.ico" />
     </head>
     
-    <body>
+    <body class="targetable">
       
         <header>
             <h1>Best practices and recommended tools</h1>
@@ -51,10 +51,16 @@
                                 <li><a href="#w3c">W3C-specific metadata</a></li>
                             </ul>
                         </li>
+                        <li><a href="#perms">Handle permissions well</a></li>
                         <li><a href="#vulns">Make sure you receive vulnerability alerts</a></li>
                         <li><a href="#ci">Set up <abbr title="continuous integration">CI</abbr></a></li>
+                        <li><a href="#ash-nazg">Set up Repository Manager</a></li>
                         <li><a href="#branches2">Patrol branches often</a></li>
+                        <li><a href="#tools">Assess the quality of your repo</a></li>
                     </ul>
+                </li>
+                <li>
+                    <a href="#also">See also</a>
                 </li>
             </ul>
         </nav>
@@ -148,6 +154,12 @@ logs/</pre>
                         <p>See <a href="w3c.json.html">the <code>w3c.json</code> file</a>.</p>
                     </section>
                 </section>
+                <section id="perms">
+                    <h3>Handle permissions well <a href="#perms">&#x1F517;</a></h3>
+                    <p>Make sure you list the right <em>teams</em> and <em>individuals</em> under &ldquo;Collaborators &amp; teams&rdquo;:</p>
+                    <pre>https://github.com/w3c/&lt;REPO&gt;/settings/collaboration</pre>
+                    <p>In particular, be conservative about assigning editing (write) permissions and do so only for known collaborators.</p>
+                </section>
                 <section id="vulns">
                     <h3>Make sure you receive vulnerability alerts <a href="#vulns">&#x1F517;</a></h3>
                     <p>Usually applicable only to repositories containing software (<em>not</em> specs), and assuming the language/platform detected in the
@@ -198,6 +210,13 @@ notifications:                      # ☞ “Configuring Build Notifications”
                     <p>The specifics of Travis configuration depend greatly on the language/platform and on the dependencies and tools involved.
                         See <a href="https://docs.travis-ci.com/">the documentation</a> or browse existing repositories using Travis to learn more.</p>
                 </section>
+                <section id="ash-nazg">
+                    <h3>Set up Repository Manager <a href="#ash-nazg">&#x1F517;</a></h3>
+                    <p>(Applicable only to repositories containing specs, <em>not</em> software.)</p>
+                    <p>You may want to add your new repository containing a spec in
+                        <a href="https://labs.w3.org/hatchery/repo-manager/">Repository Manager (<abbr title="also known as">aka</abbr> <em>Ash-Nazg</em>)</a>.
+                        This is a tool that helps with IPR managements from public contributors; check with the Systeam if in doubt.</p>
+                </section>
                 <section id="branches2">
                     <h3>Patrol branches often <a href="#branches2">&#x1F517;</a></h3>
                     <p>See also <a href="#branches">Delete your branches soon</a>.</p>
@@ -206,7 +225,39 @@ notifications:                      # ☞ “Configuring Build Notifications”
                         are either <em>merged</em> or <em>closed</em> already, are definitely good candidates for removal.
                         If in doubt, ask the author of the branch.</p>
                 </section>
+                <section id="tools">
+                    <h3>Assess the quality of your repo <a href="#tools">&#x1F517;</a></h3>
+                    <p>From time to time, run tools like these to evaluate how well your repositories are maintained, and whether they are outdated or missing
+                        some metadata or files:</p>
+                    <ul>
+                        <li><a href="https://github.com/w3c/validate-repos"><code>validate-repos</code></a>:
+                            a W3C tool, specific for repos containing specs (<em>not</em> software); see
+                            <a href="https://w3c.github.io/validate-repos/report.html">the kind of report it produces</a></li>
+                        <li><a href="https://github.com/basicallydan/forkability/"><code>forkability</code></a>: an external project, useful for any kind of
+                            public repository with open source</li>
+                    </ul>
             </section>
+            <section id="also">
+                <h2>See also <a href="#also">&#x1F517;</a></h2>
+                <ul>
+                    <li>GitHub:
+                        <ul>
+                            <li>Public page <a href="https://www.w3.org/wiki/GitHub">on the main wiki</a>
+                                (includes a collection of &ldquo;Git recipes &amp; tricks&rdquo;)</li>
+                            <li>Public page <a href="https://www.w3.org/2006/tools/wiki/Github">on the Tools Support wiki</a></li>
+                            <li>Web Platform Tests:
+                                <a href="https://web-platform-tests.org/appendix/github-intro.html">&ldquo;Introduction to GitHub&rdquo;</a></li>
+                            <li>i18n activity:
+                                <a href="https://w3c.github.io/i18n-activity/guidelines/github">&ldquo;Github guidelines for working with i18n documents&rdquo;</a></li>
+                        </ul>
+                    </li>
+                    <li>Git:
+                        <ul>
+                            <li>CSS WG wiki: <a href="https://wiki.csswg.org/tools/git">&ldquo;Quick Guide to Using Git&rdquo;</a></li>
+                            <li>Out there: <a href="https://github.com/k88hudson/git-flight-rules">&ldquo;Flight rules for Git&rdquo;</a></li>
+                        </ul>
+                    </li>
+                </ul>
         </main>
       
         <footer>
