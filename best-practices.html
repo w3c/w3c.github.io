@@ -29,6 +29,8 @@
                 <li>
                     <a href="#all">For all GitHub users</a>
                     <ul>
+                        <li><a href="#own"><em>Own</em> your code</a></li>
+                        <li><a href="#atomic">Submit <em>atomic</em> PR's</a></li>
                         <li><a href="#notifications">Make sure you receive notifications</a></li>
                         <li><a href="#branches">Delete your branches soon</a></li>
                     </ul>
@@ -68,6 +70,19 @@
         <main>
             <section id="all">
                 <h2>For all GitHub users <a href="#all">&#x1F517;</a></h2>
+                <section id="own">
+                    <h3><em>Own</em> your code <a href="#own">&#x1F517;</a></h3>
+                    <p>The repositories you contribute to should ideally have a file
+                        <a href="https://help.github.com/articles/about-codeowners/"><code>.github/CODEOWNERS</code></a>.
+                        If that is so, suggest to the maintainer edits to that file so that you will be automatically assigned PR reviews for those PR's that
+                        will affect the areas or files that you &ldquo;own&rdquo; (ie, that you are usually responsible for).</p>
+                    <p>(If that file is missing, point the maintainer of the repository to these two sections:
+                        <a href="#settings"><em>&sect; settings</em></a> and <a href="#boilerplate"><em>&sect; GitHub boilerplate files</em></a>.)</p>
+                </section>
+                <section id="atomic">
+                    <h3>Submit <em>atomic</em> PR's <a href="#atomic">&#x1F517;</a></h3>
+                    <p>Your PR's should tend to be small, and contain <em>one</em> bugfix or new feature only.</p>
+                </section>
                 <section id="notifications">
                     <h3>Make sure you receive notifications <a href="#notifications">&#x1F517;</a></h3>
                     <p>It is recommended that all users automatically subscribe to
@@ -102,8 +117,13 @@
                                 cognitive load, un-clutter the web UI, and prevent absent-minded collaborators from contributing wiki pages or other stuff that
                                 nobody is using nor paying attention to.</li>
                             <li>Set up <strong>GitHub Pages</strong> if necessary; select the right branch for that.</li>
-                            <li>In <code>https://github.com/w3c/&lt;REPO&gt;/settings/branches</code>, make sure the <strong>default branch</strong> is
-                                <code>master</code>.</li>
+                            <li>In <code>https://github.com/w3c/&lt;REPO&gt;/settings/branches</code>:
+                                <ul>
+                                    <li>Make sure the <strong>default branch</strong> is <code>master</code>.</li>
+                                    <li>Consider <a href="https://help.github.com/articles/enabling-required-reviews-for-pull-requests/">enforcing code reviews
+                                        for PR's</a>, at least for the default branch.</li>
+                                </ul>
+                            </li>
                             <li>In <code>https://github.com/w3c/&lt;REPO&gt;/settings/installations</code>, under <em>Services</em>, you may want to add a handy
                                 <strong>service</strong>; like an IRC notifier, or a Twitter bridge (depending on the nature of your repository, of course).</li>
                         </ul>
@@ -137,15 +157,19 @@ logs/</pre>
                         <h4>GitHub boilerplate files <a href="#boilerplate">&#x1F517;</a></h4>
                         <p>To keep the root directory of the repository clean and manageable, store as many metadata files under <code>.github/</code> as
                             possible.
-                            In decreasing order of importance, you may want to have these files:</p>
+                            You should certainly have a <a href="https://help.github.com/articles/about-readmes/"><code>README.md</code></a> there.</p>
+                        <p>Other useful files you may want to keep under that directory are these (in decreasing order of importance):</p>
                         <ul>
-                            <li><a href="https://help.github.com/articles/about-readmes/"><code>README.md</code></a></li>
-                            <li><a href="https://help.github.com/articles/adding-a-license-to-a-repository/"><code>LICENSE.md</code></a></li>
                             <li><a href="https://help.github.com/articles/setting-guidelines-for-repository-contributors/"><code>CONTRIBUTING.md</code></a></li>
                             <li><a href="https://help.github.com/articles/about-issue-and-pull-request-templates/"><code>ISSUE_TEMPLATE.md</code> and
                                 <code>PULL_REQUEST_TEMPLATE.md</code></a></li>
+                            <li><a href="https://help.github.com/articles/about-codeowners/"><code>CODEOWNERS</code></a></li>
                             <li><a href="https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/"><code>CODE_OF_CONDUCT.md</code></a></li>
                         </ul>
+                        <p>An exception to this rule is the file
+                            <a href="https://help.github.com/articles/adding-a-license-to-a-repository/"><code>LICENSE.md</code></a>,
+                            which should be in the root directory of the project,
+                            <a href="https://github.com/benbalter/licensee/issues/250#issuecomment-353985847">or else GitHub will not find it</a>.</p>
                         <p>See <a href="https://github.com/w3c/Eunomia/tree/master/.github">an example</a>.</p>
                     </section>
                     <section id="w3c">
@@ -236,6 +260,7 @@ notifications:                      # ☞ “Configuring Build Notifications”
                         <li><a href="https://github.com/basicallydan/forkability/"><code>forkability</code></a>: an external project, useful for any kind of
                             public repository with open source</li>
                     </ul>
+                </section>
             </section>
             <section id="also">
                 <h2>See also <a href="#also">&#x1F517;</a></h2>
@@ -257,7 +282,9 @@ notifications:                      # ☞ “Configuring Build Notifications”
                             <li>Out there: <a href="https://github.com/k88hudson/git-flight-rules">&ldquo;Flight rules for Git&rdquo;</a></li>
                         </ul>
                     </li>
+                    <li>Node.js: <a href="https://github.com/w3c/nodejs">best practices, recommended tools and template projects</a> (public repo).</li>
                 </ul>
+            </section>
         </main>
       
         <footer>
