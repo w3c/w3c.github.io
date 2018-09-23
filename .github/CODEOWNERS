@@ -3,6 +3,7 @@
 
 # tripu's:
 best-practices.html @tripu
+git.html @tripu
 repo-management @tripu
 .github @tripu
 .gitignore @tripu
