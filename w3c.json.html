@@ -34,26 +34,70 @@
     {
         "group":      40318
     ,   "contacts":   ["darobin", "sideshowbarker"]
+    ,   "repo-type":  ["rec-track"]
     }
   </pre>
   <p>
     The fields that are understood at this point are:
   </p>
   <dl>
-    <dt><code>group</code></dt>
+    <dt id="group"><code>group</code></dt>
     <dd>
-      The numeric ID of the group in charge of this repo. While it is inconvenient for humans to
-      find such IDs they are the best thing we have to programmatically create links between
-      repositories and a whole lot of other data we have that are using this type of identifier.
+      The numeric ID of the group in charge of this repo. While it is
+      inconvenient for humans to find such IDs they are the best thing
+      we have to programmatically create links between repositories
+      and a whole lot of other data we have that are using this type
+      of identifier.
+      <br/><br/>
+      <strong>Note:</strong> If the group is actually a joint task
+      force of more than group, please specify all the IDs of the
+      groups consist of the task force as an array, e.g.:<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;"group": ["35422", "83907"]
     </dd>
-    <dt id=contacts><code>contacts</code></dt>
+
+    <dt id="contacts"><code>contacts</code></dt>
     <dd>
-      An array of people who are considered points of contact for the repository for
-      administrative requests. They aren't necessarily the primary contributor and they aren't
-      necessarily from the W3C Team. Whatever works for any given repository is acceptable.
+      An array of people who are considered points of contact for the
+      repository for administrative requests. They aren't necessarily
+      the primary contributor and they aren't necessarily from the W3C
+      Team. Whatever works for any given repository is acceptable.
       For integration purposes, please use your <em>GitHub</em> ID.
     </dd>
-    <dt><code>policy</code></dt>
+
+    <dt id="repo-type"><code>repo-type</code></dt>
+    <dd>
+    String to identify the type and purpose of the repository.
+    The possible values for this field are:<br/><br/>
+    <dl>
+      <dt>rec-track</dt>
+      <dd>W3C Recommendation Track Documents including First Public
+      Working Draft, Working Draft, Candidate Recommendation, Proposed
+      Recommendation and W3C Recommendation</dd>
+
+      <dt>note</dt>
+      <dd>W3C Group Note including Working Group Note and Interest Group Note</dd>
+
+      <dt>cg-report</dt>
+      <dd>W3C Community Group Report</dd>
+
+      <dt>process</dt>
+      <dd>Discussion on the W3C Process document</dd>
+
+      <dt>homepage</dt>
+      <dd>Groups' homepages</dd>
+
+      <dt>tool</dt>
+      <dd>Development of tools</dd>
+
+      <dt>project</dt>
+      <dd>Group-independent projects</dd>
+
+      <dt>others</dt>
+      <dd>Other purposes</dd>
+    </dl>
+    </dd>
+
+    <dt id="policy"><code>policy</code></dt>
     <dd>
       This is essentially a W3C-internal flag. If set to <code>open</code>, any W3C Team member
       should feel empowered to help with the management of this given repository. This can be
