@@ -31,19 +31,19 @@
       <p>
         Navigate to the repo.
       </p>
-      <pre><code>cd specs-on-github</code></pre>
+      <pre>cd specs-on-github</pre>
     </li>
     <li>
       <p>
         Checkout the main branch of your repository (in general, this is the <code>master</code> branch).
       </p>
-      <pre><code>git checkout master</code></pre>
+      <pre>git checkout master</pre>
     </li>
     <li>
       <p>
         Make sure the main branch is up-to-date with upstream.
       </p>
-      <pre><code>git pull</code></pre>
+      <pre>git pull</pre>
       <p>
         If you forked the repository on GitHub, you may need to indicate the upstream repository more explicitly.
       </p>
@@ -53,7 +53,7 @@
         Create a new branch for your upcoming pull request (one branch per pull request). Please make branch names
         informative - by including the issue or bug number for example.
       </p>
-      <pre><code>git checkout -b my-wonderful-edits-for-87</code></pre>
+      <pre>git checkout -b my-wonderful-edits-for-87</pre>
     </li>
     <li>
       <p>
@@ -68,27 +68,28 @@
         be part of the commit. This allows you to make  multiple edits at once and split them into different more
         meaningful/easy-to-review commits.
       </p>
-      <pre><code>git add -p</code></pre>
+      <pre>git add -p</pre>
     </li>
     <li>
       <p>
         Commit your staged edits. If you're fixing an issue, reference it in the commit e.g. <code>fix #87</code>
         (if you write close or fix, it will automatically close the issue once the commit is added to the main branch).
       </p>
-      <pre><code>git commit -m "&lt;purpose of your edits> (fix #number)"</code></pre>
-      <p><code>git commit --amend</code> allows you to replace the last commit with a new one, if you feel the need to change it.</p>
+      <pre>git commit -m "&lt;purpose of your edits&gt; (fix #number)"</pre>
+      <p>This command allows you to replace the last commit with a new one, if you feel the need to change it:</p>
+      <pre>git commit --amend</pre>
     </li>
     <li>
       <p>
         Once all your commits are done, push your branch upstream.
       </p>
-      <pre><code> git push --set-upstream origin my-wonderful-edits-for-87</code></pre>
+      <pre>git push --set-upstream origin my-wonderful-edits-for-87</pre>
     </li>
     <li>
       <p>
         Using your favorite browser, navigate to the repo on GitHub, e.g.
       </p>
-      <pre><code>https://github.com/tobie/specs-on-github/</code></pre>
+      <pre>https://github.com/tobie/specs-on-github/</pre>
     </li>
     <li>
       <p>
