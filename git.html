@@ -27,10 +27,7 @@
         <nav class="internal">
             <ul>
                 <li>
-                    <a href="#aliases">Useful aliases</a>
-                </li>
-                <li>
-                    <a href="#config">Other useful config</a>
+                    <a href="#config">Useful config</a>
                 </li>
                 <li>
                     <a href="#update">Safest way to “update” a local copy</a>
@@ -46,33 +43,12 @@
 
         <main>
             <p>These are some <strong>low-level tips for the console</strong>, for <em>power users</em> of Git.</p>
-            <section id="aliases">
-                <h2>Useful aliases <a href="#aliases">&#x1F517;</a></h2>
-                <p>I find these aliases handy (they save keystrokes).
-                    You can put them inside your <a href="https://git-scm.com/docs/git-config#FILES">configuration files</a>.</p>
-                <pre>alias.br=branch
-alias.cf=config
-alias.ci=commit
-alias.co=checkout
-alias.pl=pull
-alias.ps=push
-alias.re=remote
-alias.sh=stash
-alias.st=status</pre>
-                <p>With these, eg,</p>
-                <pre>$ git ci</pre>
-                <p>is equivalent to</p>
-                <pre>$ git commit</pre>
-            </section>
             <section id="config">
-                <h2>Other useful config <a href="#config">&#x1F517;</a></h2>
+                <h2>Useful config <a href="#config">&#x1F517;</a></h2>
                 <ul>
                     <li><code>branch.autosetuprebase=always</code>
                         (<a href="https://git-scm.com/docs/git-config#git-config-branchautoSetupRebase">documentation</a>):
                         I find it easier to work with Git this way</li>
-                    <li><code>push.default=simple</code>
-                        (<a href="https://git-scm.com/docs/git-config#git-config-pushdefault">documentation</a>):
-                        the default since Git 2.0; probably you don't need to set it</li>
                     <li><code>core.editor=emacs -nw</code>
                         (<a href="https://git-scm.com/docs/git-config#git-config-coreeditor">documentation</a>):
                         that's the editor that will be invoked every time Git needs to ask you about a commit message, when you're squashing commits, etc
