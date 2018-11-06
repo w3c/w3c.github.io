@@ -33,7 +33,7 @@
   <pre>{
     "group":     40318
 ,   "contacts":  ["darobin", "sideshowbarker"]
-,   "repo-type": ["rec-track"]
+,   "repo-type": "rec-track"
 }</pre>
   <p>
     The fields that are understood at this point are:
@@ -66,7 +66,7 @@
 
     <dt id="repo-type"><code>repo-type</code></dt>
     <dd>
-    String to identify the type and purpose of the repository.
+    String to identify the type and purpose of the repository, or an array of such strings if the repository holds more than one type of content.
     The possible values for this field are:<br/><br/>
     <dl>
       <dt>rec-track</dt>
@@ -85,6 +85,9 @@
 
       <dt>homepage</dt>
       <dd>Groups' homepages</dd>
+
+      <dt>article</dt>
+      <dd>Non-spec documents</dd>
 
       <dt>tool</dt>
       <dd>Development of tools</dd>
