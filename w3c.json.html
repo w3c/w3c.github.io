@@ -39,7 +39,7 @@
     The fields that are understood at this point are:
   </p>
   <dl>
-    <dt id="group" date-type="number|array&lt;number>"><code>group</code></dt>
+    <dt id="group" data-type="number|array&lt;number>"><code>group</code></dt>
     <dd>
       The numeric ID of the group in charge of this repo. While it is
       inconvenient for humans to find such IDs they are the best thing
@@ -55,7 +55,7 @@
       <pre>"group": [35422, 83907]</pre>
     </dd>
 
-    <dt id="contacts" date-type="array&lt;string>"><code>contacts</code></dt>
+    <dt id="contacts" data-type="array&lt;string>"><code>contacts</code></dt>
     <dd>
       An array of people who are considered points of contact for the
       repository for administrative requests. They aren't necessarily
@@ -64,7 +64,7 @@
       For integration purposes, please use your <em>GitHub</em> ID.
     </dd>
 
-    <dt id="repo-type" data-type="string"><code>repo-type</code></dt>
+    <dt id="repo-type" data-type="string|array&lt;string>"><code>repo-type</code></dt>
     <dd>
     String to identify the type and purpose of the repository, or an array of such strings if the repository holds more than one type of content.
     The possible values for this field are:<br/><br/>
