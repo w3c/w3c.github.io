@@ -17,28 +17,28 @@
     "name": "privacy-tracking",
     "longdesc": "The Privacy Group (PING) is following this issue. Add it to any privacy related issue to automatically alert PING. PING may also add this label. Issues with this label don't need to be resolved to the satisfaction of PING before a transition.",
     "description": "Group bringing to attention of Privacy, or tracked by the Privacy Group but not needing response.",
-    "color": "ffff00",
+    "color": "d4af37",
     "excludeGroups": [ 52497 ]
   },
   {
     "name": "privacy-comment",
     "longdesc": "The Privacy Group (PING) has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by PING, and should only be removed by them. It may replace an privacy-tracking label.",
     "description": "Issue the Privacy Group has raised and looks for a response on.",
-    "color": "ffff00",
+    "color": "d4af37",
     "excludeGroups": [ 52497 ]
   },
   {
     "name": "a11y-tracking",
     "longdesc": "The Accessibility Group (APA) is following this issue. Add it to any a11y related issue to automatically alert a11y. a11y may also add this label. Issues with this label don't need to be resolved to the satisfaction of a11y before a transition.",
     "description": "Group bringing to attention of a11y, or tracked by the a11y Group but not needing response.",
-    "color": "ff00ff",
+    "color": "ea7472",
     "excludeGroups": [ 83907 ]
   },
   {
     "name": "a11y-comment",
     "longdesc": "The Accessibility Group (APA) has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by APA, and should only be removed by them. It may replace an a11y-tracking label.",
     "description": "Issue the Accessibility Group has raised and looks for a response on.",
-    "color": "ff00ff",
+    "color": "ea7472",
     "excludeGroups": [ 83907 ]
   }
 ]
