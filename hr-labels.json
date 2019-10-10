@@ -22,7 +22,7 @@
   },
   {
     "name": "privacy-comment",
-    "longdesc": "The Privacy Group (PING) has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by PING, and should only be removed by them. It may replace an privacy-tracking label.",
+    "longdesc": "The Privacy Group (PING) has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by PING, and should only be removed by them. It may replace a privacy-tracking label.",
     "description": "Issue the Privacy Group has raised and looks for a response on.",
     "color": "d4af37",
     "excludeGroups": [ 52497 ]
