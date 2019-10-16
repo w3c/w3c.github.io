@@ -6,6 +6,19 @@
     <title>Labels and Other Metadata for Issues and Pull Requests</title>
     <link rel="stylesheet" href="css/wgio.css">
     <link rel="icon" type="image/x-icon" href="//labs.w3.org/favicon.ico">
+    <style>
+      dl.labels dt {
+        font-weight: bold;
+        line-height: 1.5em;
+      }
+      dl.labels dd {
+        margin-top: 1em;
+      }
+      dl.labels dt span {
+        padding: 0.7ex;
+        border-radius: 0.7ex;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -24,22 +37,32 @@
   This page describes how to use GitHub <a href="#labels">labels</a>, <a href="#milestones">milestones</a>, and <a href="#projects">projects</a> in a uniform way across W3C specifications.
   </p>
 
-  <h2 id="labels">Labels</h2>
+<section id='labels'>
+  <h2>Labels</h2>
   <a href="https://help.github.com/articles/creating-and-editing-labels-for-issues-and-pull-requests/">Labels</a> describe the kind of issue or specific work that's needed to advance an issue.
 
+<section id='horizontal-reviews'>
   <h3>Horizontal labels</h3>
   <p>
     Those labels are there to facilitate horizontal reviews.
   </p>
   <dl>
-    <dt>security</dt>
+    <dt class='security'>security</span></dt>
     <dd>Affect the <a href='https://www.w3.org/TR/security-privacy-questionnaire/'>degree of resistance</a> to, or protection from, harm of Web technologies.</dd>
-    <dt>privacy</dt>
-    <dd>Affect the collection, <a href='https://w3c.github.io/fingerprinting-guidance/'>processing</a> and  <a href='https://www.w3.org/TR/security-privacy-questionnaire/'>publication of personal data</a> in Web technologies.</dd>
-    <dt>a11y</dt>
-    <dd>Affect the design of Web technologies for people with disabilities.</dd>
-    <dt>i18n</dt>
-    <dd>Affect the <a href='https://www.w3.org/International/review-request'>adaptation of Web technologies to different languages or regional differences</a>.</dd>
+    <dt class='privacy'>privacy</dt>
+    <dd>
+      <p>
+        Affect the collection, <a href='https://w3c.github.io/fingerprinting-guidance/'>processing</a> and  <a href='https://www.w3.org/TR/security-privacy-questionnaire/'>publication of personal data</a> in Web technologies.
+      </p>
+    </dd>
+    <dt class='a11y'>Accessibility</dt>
+    <dd>
+      <p>Affect the design of Web technologies for people with disabilities.</p>
+    </dd>
+    <dt class='i18n'>Internationalization</dt>
+    <dd>
+      <p>Affect the <a href='https://www.w3.org/International/review-request'>adaptation of Web technologies to different languages or regional differences</a>.</p>
+    </dd>
     <dt>architecture</dt>
     <dd>Affect the <a href='https://w3ctag.github.io/design-principles/'>underlying principles</a> that should be adhered to by all Web technologies.</dd>
     <dt>performance</dt>
@@ -47,7 +70,9 @@
     <dt>device independence</dt>
     <dd>Affect the ability of Web technologies to function on a wide variety of devices.</dd>
   </dl>
-  <h3>Testing and Implementations</h3>
+</section>
+<section id='testing'>
+<h3>Testing and Implementations</h3>
   <p>Those labels are meant to track testing and implementation status.</p>
   <dl>
     <dt>needs tests</dt>
@@ -57,6 +82,8 @@
     <dt>test:missing-coverage</dt>
     <dd>More tests will be needed in this area.</dd>
   </dl>
+</section>
+<section id='specifications'>
   <h3>Specifications</h3>
   <dl>
     <dt>editorial</dt>
@@ -78,8 +105,10 @@
     <dt>w3c</dt>
     <dd>This is used to track non-technical W3C Process related issues, such as transitions.</dd>
   </dl>
-
-  <h2 id="milestones">Milestones</h2>
+</section>
+</section>
+<section id='milestones'>
+  <h2>Milestones</h2>
   <a href="https://help.github.com/articles/tracking-the-progress-of-your-work-with-milestones/">Milestones</a> describe the scheduling of bug fixes and changes.
   Often an issue is labeled with a particular milestone as a way to postpone work on it until after work needed for an earlier milestone.
 
@@ -101,8 +130,9 @@
     <dt>future-work</dt>
     <dd>Work on these issues at an unspecified time in the future.</dd>
   </dl>
-
-  <h2 id="wide-review">Wide Review</h2>
+</section>
+<section id='wide-review'>
+  <h2>Wide Review</h2>
   <p>1-The WG processes the comment, and provides a resolution.</p>
 
   <dl>
@@ -144,12 +174,13 @@
   <p>Note that groups may work on a level-2 spec concurrently with pushing the
   level-1 spec through the Recommendation process, so repositories may need
   milestones like "level-2-CR".</p>
-
+</section>
+<section id='projects'>
   <h2 id="projects">Projects</h2>
   <a href="https://help.github.com/articles/tracking-the-progress-of-your-work-with-project-boards/">Projects</a> describe separate features within a larger specification.
   Usually, prefer to create a new repository to track greenfield feature development, and take it through the <a href="https://www.w3.org/blog/2015/07/wicg/">incubation process</a> instead of using a project within an existing spec repository.
   Even when used, project names are generally not shared between specifications, so we don't list samples here.
-
+</section>
 </main>
     <footer>
       <address><a href="https://github.com/w3c/w3c.github.io/">We are on GitHub</a></address>
@@ -157,5 +188,32 @@
         <a href="https://www.w3.org/"><img src="img/w3c.svg" width="65" height="45" alt="W3C Logo"></a>
       </p>
     </footer>
+<script>
+// populate horizontal reviews
+fetch("hr-labels.json").then(res => res.json()).then(labels => {
+  // labels is an array of labels
+  const dts = document.querySelectorAll("#horizontal-reviews dl dt");
+  for (let index = 0; index < dts.length; index++) {
+    let dt = dts[index];
+    let className = dt.className;
+    if (className) {
+      console.log("className: " + className);
+      let dd = dt.nextElementSibling;
+      console.log(dd);
+      let entries = "<dl class='labels'>";
+      labels.forEach(label => {
+        if (label.name.indexOf(className) === 0) {
+          console.log("label: " + label.name);
+          entries+= "<dt id='" + label.name + "'><span style='background-color: #" + label.color + "'>" + label.name
+           + "</span></dt><dd>" + label.longdesc + "</dd>";
+        }
+      })
+      let div = document.createElement("div");
+      div.innerHTML = entries;
+      dd.appendChild(div);
+    }
+  }
+})
+</script>
   </body>
 </html>
