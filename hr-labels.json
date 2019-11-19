@@ -1,6 +1,6 @@
 [
   {
-    "name": "i18n-tracking",
+    "name": "i18n-tracker",
     "longdesc": "The Internationalization (i18n) Group may add this label to indicate that they are following a discussion. Other WGs can also add the label to any issue to automatically bring the discussion to the attention of the i18n Group. Issues with this label don't need to be resolved to the satisfaction of the i18n Group before a transition.",
     "description": "Group bringing to attention of Internationalization, or tracked by i18n but not needing response.",
     "color": "F9C9FF",
@@ -14,7 +14,7 @@
     "excludeGroups": [  32113,  72665 ]
   },
   {
-    "name": "privacy-tracking",
+    "name": "privacy-tracker",
     "longdesc": "The Privacy Group (PING) may add this label to indicate that they are following a discussion. Other WGs can also add the label to any issue to automatically bring the discussion to the attention of the PING Group. Issues with this label don't need to be resolved to the satisfaction of the PING Group before a transition.",
     "description": "Group bringing to attention of Privacy, or tracked by the Privacy Group but not needing response.",
     "color": "d4af37",
@@ -28,7 +28,7 @@
     "excludeGroups": [ 52497 ]
   },
   {
-    "name": "a11y-tracking",
+    "name": "a11y-tracker",
     "longdesc": "The Accessibility Group (APA) may add this label to indicate that they are following a discussion. Other WGs can also add the label to any issue to automatically bring the discussion to the attention of the APA Group. Issues with this label don't need to be resolved to the satisfaction of the APA Group before a transition.",
     "description": "Group bringing to attention of a11y, or tracked by the a11y Group but not needing response.",
     "color": "ea7472",
