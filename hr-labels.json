@@ -7,7 +7,7 @@
     "excludeGroups": [  32113,  72665 ]
   },
   {
-    "name": "i18n-comment",
+    "name": "i18n-needs-resolution",
     "longdesc": "The Internationalization (i18n) Group has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by the i18n WG, and should only be removed by them. It may replace an i18n-tracking label.",
     "description": "Issue the Internationalization Group has raised and looks for a response on.",
     "color": "F9C9FF",
@@ -21,7 +21,7 @@
     "excludeGroups": [ 52497 ]
   },
   {
-    "name": "privacy-comment",
+    "name": "privacy-needs-resolution",
     "longdesc": "The Privacy Group (PING) has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by PING, and should only be removed by them. It may replace a privacy-tracking label.",
     "description": "Issue the Privacy Group has raised and looks for a response on.",
     "color": "d4af37",
@@ -35,7 +35,7 @@
     "excludeGroups": [ 83907 ]
   },
   {
-    "name": "a11y-comment",
+    "name": "a11y-needs-resolution",
     "longdesc": "The Accessibility Group (APA) has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by APA, and should only be removed by them. It may replace an a11y-tracking label.",
     "description": "Issue the Accessibility Group has raised and looks for a response on.",
     "color": "ea7472",
