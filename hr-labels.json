@@ -4,13 +4,15 @@
     "longdesc": "The Internationalization (i18n) Group may add this label to indicate that they are following a discussion. Other WGs can also add the label to any issue to automatically bring the discussion to the attention of the i18n Group. Issues with this label don't need to be resolved to the satisfaction of the i18n Group before a transition.",
     "description": "Group bringing to attention of Internationalization, or tracked by i18n but not needing response.",
     "color": "F9C9FF",
+    "repo": "w3c/i18n-activity",
     "excludeGroups": [  32113,  72665 ]
   },
   {
     "name": "i18n-needs-resolution",
-    "longdesc": "The Internationalization (i18n) Group has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by the i18n Group, and should only be removed by them. It may replace an *-tracker label.",
+    "longdesc": "The Internationalization (i18n) Group has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by the i18n Group, and should only be removed by them. It may replace an i18n-tracker label.",
     "description": "Issue the Internationalization Group has raised and looks for a response on.",
     "color": "F9C9FF",
+    "repo": "w3c/i18n-activity",
     "excludeGroups": [  32113,  72665 ]
   },
   {
@@ -18,13 +20,15 @@
     "longdesc": "The Privacy Group (PING) may add this label to indicate that they are following a discussion. Other WGs can also add the label to any issue to automatically bring the discussion to the attention of the PING Group. Issues with this label don't need to be resolved to the satisfaction of the PING Group before a transition.",
     "description": "Group bringing to attention of Privacy, or tracked by the Privacy Group but not needing response.",
     "color": "d4af37",
+    "repo": "w3cping/tracking-issues",
     "excludeGroups": [ 52497 ]
   },
   {
     "name": "privacy-needs-resolution",
-    "longdesc": "The Privacy Group (PING) has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by the PING Group, and should only be removed by them. It may replace an *-tracker label.",
+    "longdesc": "The Privacy Group (PING) has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by the PING Group, and should only be removed by them. It may replace an privacy-tracker label.",
     "description": "Issue the Privacy Group has raised and looks for a response on.",
     "color": "d4af37",
+    "repo": "w3cping/tracking-issues",
     "excludeGroups": [ 52497 ]
   },
   {
@@ -32,13 +36,15 @@
     "longdesc": "The Accessibility Group (APA) may add this label to indicate that they are following a discussion. Other WGs can also add the label to any issue to automatically bring the discussion to the attention of the APA Group. Issues with this label don't need to be resolved to the satisfaction of the APA Group before a transition.",
     "description": "Group bringing to attention of a11y, or tracked by the a11y Group but not needing response.",
     "color": "ea7472",
+    "repo": "w3c/a11y-review",
     "excludeGroups": [ 83907 ]
   },
   {
     "name": "a11y-needs-resolution",
-    "longdesc": "The Accessibility Group (APA) has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by the APA Group, and should only be removed by them. It may replace an *-tracker label.",
+    "longdesc": "The Accessibility Group (APA) has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by the APA Group, and should only be removed by them. It may replace an a11y-tracker label.",
     "description": "Issue the Accessibility Group has raised and looks for a response on.",
     "color": "ea7472",
+    "repo": "w3c/a11y-review",
     "excludeGroups": [ 83907 ]
   }
 ]
