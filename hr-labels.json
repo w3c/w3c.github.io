@@ -32,6 +32,22 @@
     "excludeGroups": [ 52497 ]
   },
   {
+    "name": "security-tracker",
+    "longdesc": "The security Group may add this label to indicate that they are following a discussion. Other WGs can also add the label to any issue to automatically bring the discussion to the attention of the PING Group. Issues with this label don't need to be resolved to the satisfaction of the PING Group before a transition.",
+    "description": "Group bringing to attention of security, or tracked by the security Group but not needing response.",
+    "color": "ffff00",
+    "repo": "w3c/security-review",
+    "excludeGroups": [ 49309 ]
+  },
+  {
+    "name": "security-needs-resolution",
+    "longdesc": "The security Group has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by the PING Group, and should only be removed by them. It may replace an security-tracker label.",
+    "description": "Issue the security Group has raised and looks for a response on.",
+    "color": "ffff00",
+    "repo": "w3c/security-review",
+    "excludeGroups": [ 49309 ]
+  },
+  {
     "name": "a11y-tracker",
     "longdesc": "The Accessibility Group (APA) may add this label to indicate that they are following a discussion. Other WGs can also add the label to any issue to automatically bring the discussion to the attention of the APA Group. Issues with this label don't need to be resolved to the satisfaction of the APA Group before a transition.",
     "description": "Group bringing to attention of a11y, or tracked by the a11y Group but not needing response.",
