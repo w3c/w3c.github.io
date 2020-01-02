@@ -14,9 +14,11 @@
       dl.labels dd {
         margin-top: 1em;
       }
-      dl.labels dt span {
+      dl.labels dt a {
         padding: 0.7ex;
         border-radius: 0.7ex;
+        text-decoration: none;
+        color: black;
       }
     </style>
   </head>
@@ -197,15 +199,14 @@ fetch("hr-labels.json").then(res => res.json()).then(labels => {
     let dt = dts[index];
     let className = dt.className;
     if (className) {
-      console.log("className: " + className);
       let dd = dt.nextElementSibling;
-      console.log(dd);
       let entries = "<dl class='labels'>";
       labels.forEach(label => {
         if (label.name.indexOf(className) === 0) {
-          console.log("label: " + label.name);
-          entries+= "<dt id='" + label.name + "'><span style='background-color: #" + label.color + "'>" + label.name
-           + "</span></dt><dd>" + label.longdesc + "</dd>";
+          let sublabel = label.name.substring(className.length+1);
+          entries+= `<dt id='${label.name}'><a href='https://github.com/${label.repo}/issues/?q=label%3A${sublabel}'
+           style='background-color: #${label.color}'>${label.name}</a></dt>
+           <dd>${label.longdesc}</dd>`;
         }
       })
       let div = document.createElement("div");
