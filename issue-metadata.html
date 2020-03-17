@@ -210,7 +210,7 @@ fetch("hr-labels.json").then(res => res.json()).then(labels => {
           let sublabel = label.name.substring(className.length+1);
           entries+= `<dt id='${label.name}'><a href='https://github.com/${label.repo}/issues/?q=label%3A${sublabel}'
            style='background-color: #${label.color}'>${label.name}</a></dt>
-           <dd>${label.longdesc}</dd>`;
+           <dd><p>${label.longdesc}</p><p>Color: #${label.color}</p></dd>`;
         }
       })
       let div = document.createElement("div");
