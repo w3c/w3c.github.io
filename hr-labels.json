@@ -70,5 +70,23 @@
     "symbol": "♿",
     "repo": "w3c/a11y-review",
     "excludeGroups": [ 83907 ]
+  },
+  {
+    "name": "tag-tracker",
+    "longdesc": "The Technical Architecture Group (TAG) may add this label to indicate that they are following a discussion. Other WGs can also add the label to any issue to automatically bring the discussion to the attention of the TAG. Issues with this label don't need to be resolved to the satisfaction of the TAG before a transition.",
+    "description": "Group bringing to attention of the TAG, or tracked by the TAG but not needing response.",
+    "color": "7fff00",
+    "symbol": "🗼",
+    "repo": "w3ctag/tracking-issues",
+    "excludeGroups": [ 34270 ]
+  },
+  {
+    "name": "tag-needs-resolution",
+    "longdesc": "The Technical Architecture Group (TAG) has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by the TAG, and should only be removed by them. It may replace an tag-tracker label.",
+    "description": "Issue the Technical Architecture Group has raised and looks for a response on.",
+    "color": "7fff00",
+    "symbol": "🗼",
+    "repo": "w3ctag/tracking-issues",
+    "excludeGroups": [ 34270 ]
   }
 ]
