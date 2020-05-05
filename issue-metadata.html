@@ -88,8 +88,6 @@
 <section id='specifications'>
   <h3>Specifications</h3>
   <dl>
-    <dt>editorial</dt>
-    <dd>The reported issue can be addressed with an editorial change. This tag could be combined with others (except <code>substantive</code>).</dd>
     <dt>substantive</dt>
     <dd>The reported issue will only be addressed with a substantive change.  This tag could be combined with others (except <code>editorial</code>).</dd>
     <dt>bug</dt>
@@ -106,10 +104,6 @@
     <dd>This issue won't get addressed. Best is to combine this one with others, sich as <code>invalid</code>.</dd>
     <dt>w3c</dt>
     <dd>This is used to track non-technical W3C Process related issues, such as transitions.</dd>
-    <dt>Errata</dt>
-    <dd>Erratum for a W3C Recommendation (see <a href="https://github.com/w3c/display_errata">w3c/display_errata</a>)</dd>
-    <dt>ErratumRaised</dt>
-    <dd>Raised to become an Errata later (see <a href="https://github.com/w3c/display_errata">w3c/display_errata</a>)</dd>
   </dl>
 </section>
 </section>
@@ -161,6 +155,7 @@
   <p> For each comment, please fill a  "type" <a href="#type">with above labels</a></p>
 
   <p>2-Once the WG has processed all comments, the next steps are to get approval from the commenter</p>
+  <dl>
     <dt>WR-response-drafted</dt>
     <dd>Response to commenter drafted by WG</dd>
     <dt>WR-response-sent</dt>
@@ -173,7 +168,7 @@
     <dd>Response partially agreed by commenter (needs more discussion)</dd>
     <dt>WR-commenter-no-response</dt>
     <dd>No Response received from commenter within the stated period </dd>
-    </dl>
+  </dl>
 
   <p>For more information please refer to the <a href="https://www.w3.org/wiki/TimedText/TTML2_Wide_Review"> TTWG wiki Wide Review page</a></p>.
 
@@ -218,6 +213,18 @@ fetch("hr-labels.json").then(res => res.json()).then(labels => {
       dd.appendChild(div);
     }
   }
+})
+// populate specification labels
+fetch("specification-labels.json").then(res => res.json()).then(labels => {
+  const dl = document.querySelector("#specifications dl");
+  let entries = "";
+  labels.forEach(label => {
+    entries+= `<dt id='${label.name}' style='background-color: #${label.color}'>${label.name}</a></dt>
+     <dd>${label.longdesc}</dd>`;
+  })
+  const frag = document.createDocumentFragment();
+  frag.innerHTML = entries;
+  dl.appendChild(frag);
 })
 </script>
   </body>
