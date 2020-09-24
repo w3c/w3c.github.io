@@ -1,0 +1,20 @@
+[
+  {
+    "name": "erratum",
+    "longdesc": "An issue was accepted as an erratum and be listed on the errata page of the Recommendation.",
+    "description": "Erratum for a W3C Recommendation",
+    "color": "0052cc"
+  },
+  {
+    "name": "erratum-raised",
+    "longdesc": "An issue is raised for a possible erratum. If it is accepted as a genuine erratum, the label 'errata' should replace it.",
+    "description": "Raised to become an Errata later",
+    "color": "0052cc"
+  },
+  {
+    "name": "editorial",
+    "longdesc": "By default, an issue is considered substantive unless indicated otherwise. If the reported issue can be addressed with an editorial change, use this label.",
+    "description": "This is an editorial issue.",
+    "color": "c5def5"
+  }
+]
