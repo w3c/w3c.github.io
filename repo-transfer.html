@@ -24,13 +24,20 @@
   <p>General information about repository transfer on GitHub is available <a href="https://docs.github.com/en/github/administering-a-repository/transferring-a-repository">here</a>.</p>
   <ol>
     <li>Make sure the <a href="https://github.com/w3c/">W3C GitHub organization</a> doesn't already have a repository with the same name. If the name is already taken, the owner will need to rename the repository first
-    <li>The owner of the repository requests the transfer from the repository settings<br>
+    <li>The owner of the repository requests the transfer from the repository settings:
+      <ul>
+        <li>if the owner is a W3C staff, they can transfer the repository directly to the W3C organization
+        <li>if the owner is an individual that cannot create new repository under the W3C organization, they need to transfer the repository to a W3C staff who will then transfer to the organization
+        <li>if the owner is another organization, a W3C staff first needs to join the organization with enough privileges to make the transfer and that staff will issue the transfer to the W3C organization
+      </ul>
       <img src="img/github-transfer.png" title="GitHub repository transfer"/>
   </ol>
 
   <p>Once the tansfer is done, the next steps vary depending on the nature of the repository (specifications development or tooling).</p>
   <ul>
-    <li>if the repository is about specifications development, it needs to be tracked by the repository manager. To do so, a W3C staff needs to <a href="https://labs.w3.org/repo-manager/repo/import">import it to the repository manager</a> so contributions can be checked. The repository manager will offer to add some files (<code>w3c.json</code>, <code>CONTRIBUTING.md</code>, <code>LICENSE.md</code>, etc) if they don't already exist and will add a webhook to the repository<br>
+    <li>if the repository is about specifications development, it needs to be tracked by the repository manager. To do so, someone with admin rights on the repository needs to <a href="https://labs.w3.org/repo-manager/repo/import">import it to the repository manager</a> so contributions can be checked. The repository manager will offer to add some files (<code>w3c.json</code>, <code>CONTRIBUTING.md</code>, <code>LICENSE.md</code>, etc) if they don't already exist and will add a webhook to the repository.<br>
+      <strong>Be careful to select the right link to log in to the repository manager</strong>.<br>
+      <img src="img/repo-manager-login.png" title="Repository manager login"/><hr>
       <img src="img/repo-manager-import.png" title="Repository manager import"/>
       <li>otherwise, you only need to add a file <a href="/w3c.json.html"><code>w3c.json</code></a> at the root of the repository
   </ul>
