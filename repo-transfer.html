@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Transfer a repository to the W3C GitHub organization</title>
+    <link rel="stylesheet" href="css/wgio.css">
+  </head>
+  <body>
+    <header>
+      <h1>Transfer a repository to the W3C GitHub organization</h1>
+    </header>
+<nav>
+  <a href="/">Home</a>
+  •
+  <a href="https://github.com/w3c/">Repositories</a>
+  •
+  <a href="https://help.github.com/">GitHub Help</a>
+</nav>
+
+<main>
+  <p>This document describes how to transfer a repository to the <a href="https://github.com/w3c/">W3C GitHub organization</a>.</p>
+  <p><a href="https://docs.github.com/en/github/administering-a-repository/transferring-a-repository">See also general information about GitHub repo transfer</a>.</p>
+  <ol>
+    <li>Make sure the <a href="https://github.com/w3c/">W3C GitHub organization</a> doesn't already have a repository with the same name. If the name is already taken, the owner will need to rename the repository first
+    <li>The repository owner initiates the transfer. This is done via the repo settings (see screen shot below):
+      <ul>
+        <li>if the owner is a W3C staff, they can transfer the repository directly to the W3C organization
+        <li>if the owner is an individual that cannot create new repository under the W3C organization, they need to transfer the repository to a W3C staff who will then transfer to the organization
+        <li>if the owner is another organization, a W3C staff first needs to join the organization <a href="https://docs.github.com/en/github/administering-a-repository/transferring-a-repository#transferring-a-repository-owned-by-your-organization">as an owner or admin of the repository</a> to make the transfer and that staff will issue the transfer to the W3C organization
+      </ul>
+      <img src="img/github-transfer.png" title="GitHub repository transfer"/>
+  </ol>
+
+  <p>Once the tansfer is done, the next steps vary depending on the nature of the repository (specifications development or tooling).</p>
+  <ul>
+    <li><strong>if the repository is about specifications development</strong>, it needs to be tracked by the <a href="https://labs.w3.org/repo-manager/">W3C repository manager</a> to help ensure that contributions are properly managed under W3C patent policies. To add a repository to the W3C repository manager, someone with admin rights on the repository needs to import it via the <a href="https://labs.w3.org/repo-manager/repo/import">"import" tool</a>. The repository manager will offer to add some files (<code>w3c.json</code>, <code>CONTRIBUTING.md</code>, <code>LICENSE.md</code>, etc) if they don't already exist and will add a webhook to the repository.<br>
+      <strong>Be careful to select the right link to log in to the repository manager</strong>.<br>
+      <img src="img/repo-manager-login.png" title="Repository manager login"/><hr>
+      <img src="img/repo-manager-import.png" title="Repository manager import"/>
+      <li><strong>if the repository is not about specifications development</strong>, you only need to add a file <a href="/w3c.json.html"><code>w3c.json</code></a> at the root of the repository
+  </ul>
+  
+</main>
+    <footer>
+      <address><a href="https://github.com/w3c/w3c.github.io/">We are on GitHub</a></address>
+      <p>
+        <a href="https://www.w3.org/"><img src="img/w3c.svg" width="65" height="45" alt="W3C Logo"></a>
+      </p>
+    </footer>
+  </body>
+</html>
