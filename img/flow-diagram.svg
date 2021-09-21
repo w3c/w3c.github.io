@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="64cm" height="43cm" viewBox="119 -2 1263 843" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="340" y="0" width="280" height="40"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="340" y="0" width="280" height="40"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="368" y1="0" x2="368" y2="40"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="592" y1="0" x2="592" y2="40"/>
+    <text font-size="13.5467" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="480" y="24.2333">
+      <tspan x="480" y="24.2333">I want to publish a spec!</tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #f8f8f8" points="480,80 580,120 480,160 380,120 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="480,80 580,120 480,160 380,120 "/>
+    <text font-size="12.4178" style="fill: #008000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="480" y="123.789">
+      <tspan x="480" y="123.789">Like, by hand?</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="480" y1="40" x2="480" y2="69"/>
+    <polygon style="fill: #000000" points="475,69 480,79 485,69 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="475,69 480,79 485,69 "/>
+  </g>
+  <g>
+    <polygon style="fill: #f8f8f8" points="800,180 900,220 800,260 700,220 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="800,180 900,220 800,260 700,220 "/>
+    <text font-size="12.4178" style="fill: #008000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="800" y="216.028">
+      <tspan x="800" y="216.028">Which tool do</tspan>
+      <tspan x="800" y="231.55">you prefer?</tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,120 580,120 800,120 800,168 "/>
+    <polygon style="fill: #000000" points="795,168 800,178 805,168 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="795,168 800,178 805,168 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="900,220 900,220 1080,220 1080,309 "/>
+    <polygon style="fill: #000000" points="1075,309 1080,319 1085,309 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1075,309 1080,319 1085,309 "/>
+  </g>
+  <g>
+    <polygon style="fill: #f8f8f8" points="521.54,260 623.079,300.002 521.54,340.004 420,300.002 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="521.54,260 623.079,300.002 521.54,340.004 420,300.002 "/>
+    <text font-size="12.4178" style="fill: #008000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="521.54" y="296.03">
+      <tspan x="521.54" y="296.03">You have a</tspan>
+      <tspan x="521.54" y="311.552">web server?</tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="700,220 700,220 521.54,220 521.54,249 "/>
+    <polygon style="fill: #000000" points="516.54,249 521.54,259 526.54,249 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="516.54,249 521.54,259 526.54,249 "/>
+  </g>
+  <text font-size="12.4178" style="fill: #000000;text-anchor:end;font-family:sans-serif;font-style:normal;font-weight:normal" x="800" y="111.55">
+    <tspan x="800" y="111.55">You kiddin' me?</tspan>
+  </text>
+  <g>
+    <rect style="fill: #f0f0ff" x="540" y="360" width="280" height="40"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="540" y="360" width="280" height="40"/>
+    <text font-size="12.4178" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="680" y="383.789">
+      <tspan x="680" y="383.789">https://api.csswg.org/bikeshed</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #f0f0ff" x="780" y="440" width="280" height="40"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="780" y="440" width="280" height="40"/>
+    <text font-size="12.4178" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="920" y="463.789">
+      <tspan x="920" y="463.789">https://github.com/w3c/respec</tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #f8f8f8" points="1080,320 1180,360 1080,400 980,360 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1080,320 1180,360 1080,400 980,360 "/>
+    <text font-size="12.4178" style="fill: #008000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1080" y="356.028">
+      <tspan x="1080" y="356.028"> You have a</tspan>
+      <tspan x="1080" y="371.55">web server?</tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1180,360 1180,360 1240,360 1240,429 "/>
+    <polygon style="fill: #000000" points="1235,429 1240,439 1245,429 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1235,429 1240,439 1245,429 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="980,360 980,360 920,360 920,429 "/>
+    <polygon style="fill: #000000" points="915,429 920,439 925,429 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="915,429 920,439 925,429 "/>
+  </g>
+  <text font-size="12.4178" style="fill: #000000;text-anchor:end;font-family:sans-serif;font-style:normal;font-weight:normal" x="1240" y="351.55">
+    <tspan x="1240" y="351.55">No</tspan>
+  </text>
+  <text font-size="12.4178" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="920" y="351.55">
+    <tspan x="920" y="351.55">Yes</tspan>
+  </text>
+  <text font-size="12.4178" style="fill: #000000;text-anchor:end;font-family:sans-serif;font-style:normal;font-weight:normal" x="1080" y="211.55">
+    <tspan x="1080" y="211.55">ReSpec</tspan>
+  </text>
+  <text font-size="12.4178" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="520" y="211.55">
+    <tspan x="520" y="211.55">Bikeshed</tspan>
+  </text>
+  <g>
+    <rect style="fill: #f0f0ff" x="220" y="360" width="280" height="40"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="220" y="360" width="280" height="40"/>
+    <text font-size="11.8533" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="360" y="383.642">
+      <tspan x="360" y="383.642">https://github.com/tabatkins/bikeshed</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #f0f0ff" x="1100" y="440" width="280" height="40"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1100" y="440" width="280" height="40"/>
+    <text font-size="12.4178" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1240" y="463.789">
+      <tspan x="1240" y="463.789">https://labs.w3.org/spec-generator</tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,300.002 420,300 360,300 360,349 "/>
+    <polygon style="fill: #000000" points="355,349 360,359 365,349 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="355,349 360,359 365,349 "/>
+  </g>
+  <text font-size="12.4178" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="360" y="291.55">
+    <tspan x="360" y="291.55">Yes</tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="623.079,300.002 623.079,299.998 680,299.998 680,349 "/>
+    <polygon style="fill: #000000" points="675,349 680,359 685,349 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="675,349 680,359 685,349 "/>
+  </g>
+  <text font-size="12.4178" style="fill: #000000;text-anchor:end;font-family:sans-serif;font-style:normal;font-weight:normal" x="680" y="291.55">
+    <tspan x="680" y="291.55">No</tspan>
+  </text>
+  <g>
+    <polygon style="fill: #f8f8f8" points="680,560 780,600 680,640 580,600 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="680,560 780,600 680,640 580,600 "/>
+    <text font-size="12.4178" style="fill: #008000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="680" y="596.028">
+      <tspan x="680" y="596.028">Your spec is</tspan>
+      <tspan x="680" y="611.55">more than 1 file?</tspan>
+    </text>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="380,120 380,120 120,120 120,520 "/>
+  <text font-size="12.4178" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="120" y="111.55">
+    <tspan x="120" y="111.55">Yes, I'm ol' skool </tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="780" y="800" width="280" height="40"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="780" y="800" width="280" height="40"/>
+    <text font-size="11.2889" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="920" y="823.444">
+      <tspan x="920" y="823.444">https://github.com/tabatkins/bikeshed</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="1240" y1="520" x2="120" y2="520"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="360" y1="400" x2="360" y2="520"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="680" y1="400" x2="680" y2="520"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="920" y1="480" x2="920" y2="520"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="1240" y1="480" x2="1240" y2="520"/>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="680" y1="520" x2="680" y2="549"/>
+    <polygon style="fill: #000000" points="675,549 680,559 685,549 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="675,549 680,559 685,549 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="300" y="700" width="280" height="40"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="300" y="700" width="280" height="40"/>
+    <text font-size="13.5467" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="440" y="724.133">
+      <tspan x="440" y="724.133">dfe</tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,600 580,600 440,600 440,689 "/>
+    <polygon style="fill: #000000" points="435,689 440,699 445,689 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="435,689 440,699 445,689 "/>
+  </g>
+  <text font-size="12.4178" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="540" y="591.55">
+    <tspan x="540" y="591.55">Yes</tspan>
+  </text>
+  <text font-size="12.4178" style="fill: #000000;text-anchor:end;font-family:sans-serif;font-style:normal;font-weight:normal" x="840" y="591.55">
+    <tspan x="840" y="591.55">No</tspan>
+  </text>
+  <g>
+    <polygon style="fill: #f8f8f8" points="920,660 1020,700 920,740 820,700 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="920,660 1020,700 920,740 820,700 "/>
+    <text font-size="12.4178" style="fill: #008000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="920" y="696.028">
+      <tspan x="920" y="696.028"> You have a</tspan>
+      <tspan x="920" y="711.55">web server?</tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="780,600 780,600 920,600 920,649 "/>
+    <polygon style="fill: #000000" points="915,649 920,659 925,649 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="915,649 920,659 925,649 "/>
+  </g>
+</svg>
