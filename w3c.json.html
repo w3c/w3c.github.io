@@ -30,7 +30,7 @@
     Here is an example:
   </p>
   <pre>{
-    "group":     "webrtc"
+    "group":     "wg/webrtc"
 ,   "contacts":  ["dontcallmedom"]
 ,   "repo-type": "rec-track"
 }</pre>
@@ -40,14 +40,14 @@
   <dl>
     <dt id="group" data-type="number|array&lt;number>|string|array&lt;string>"><code>group</code></dt>
     <dd>
-      The shortname (alternatively, the numeric ID) of the group in charge of this repo. If the repo is not linked to any group, do not include that field.
+      The "/"-seperated concatenation of group-type ("wg", "cg", "ig", "bg") and shortname (alternatively, the numeric ID) of the group in charge of this repo. If the repo is not linked to any group, do not include that field.
       <br />
       <br />
       <strong>Note:</strong> If the group is actually a joint task
       force of more than group, please specify all the shortnames of the
       groups consist of the task force as an array, e.g.:
       <br />
-      <pre>"group": ["css", "svg"]</pre>
+      <pre>"group": ["wg/css", "wg/svg"]</pre>
     </dd>
 
     <dt id="contacts" data-type="array&lt;string>"><code>contacts</code></dt>
