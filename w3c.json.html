@@ -30,24 +30,24 @@
     Here is an example:
   </p>
   <pre>{
-    "group":     40318
-,   "contacts":  ["darobin", "sideshowbarker"]
+    "group":     "webrtc"
+,   "contacts":  ["dontcallmedom"]
 ,   "repo-type": "rec-track"
 }</pre>
   <p>
     The fields that are understood at this point are:
   </p>
   <dl>
-    <dt id="group" data-type="number|array&lt;number>"><code>group</code></dt>
+    <dt id="group" data-type="number|array&lt;number>|string|array&lt;string>"><code>group</code></dt>
     <dd>
-      The numeric ID of the group in charge of this repo. If the repo is not linked to any group, do not include that field.
+      The shortname (alternatively, the numeric ID) of the group in charge of this repo. If the repo is not linked to any group, do not include that field.
       <br />
       <br />
       <strong>Note:</strong> If the group is actually a joint task
-      force of more than group, please specify all the IDs of the
+      force of more than group, please specify all the shortnames of the
       groups consist of the task force as an array, e.g.:
       <br />
-      <pre>"group": [35422, 83907]</pre>
+      <pre>"group": ["css", "svg"]</pre>
     </dd>
 
     <dt id="contacts" data-type="array&lt;string>"><code>contacts</code></dt>
