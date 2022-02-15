@@ -71,7 +71,7 @@
     "policy": {
       "enum": [
         "open",
-        "close"
+        "restricted"
       ],
       "description": " If set to open, any W3C Team member should feel empowered to help with the management of this given repository."
     }
