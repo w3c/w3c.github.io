@@ -79,7 +79,7 @@
   "$defs": {
     "groupName": {
       "type": "string",
-      "pattern": "(wg|ig|cg|bg|other)/[^/]+",
+      "pattern": "(wg|ig|cg|bg|tf|other)/[^/]+",
       "description": "The prefixed shortname of a group, per https://api.w3.org/groups/{groupName}"
     },
     "repoTypes": {
