@@ -7,12 +7,12 @@
     "group": {
       "anyOf": [
         {
-          "$ref": "#/$defs/groupID"
+          "$ref": "#/$defs/groupName"
         },
         {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/groupID"
+            "$ref": "#/$defs/groupName"
           },
           "minItems": 1,
           "uniqueItems": true
@@ -77,11 +77,10 @@
     }
   },
   "$defs": {
-    "groupID": {
-      "type": "integer",
-      "minimum": 1,
-      "maximum": 1000000,
-      "description": "The numeric ID of a group, per https://api.w3.org/groups/{groupID}"
+    "groupName": {
+      "type": "string",
+      "pattern": "(wg|ig|cg|bg|other)/[^/]+",
+      "description": "The prefixed shortname of a group, per https://api.w3.org/groups/{groupName}"
     },
     "repoTypes": {
       "enum": [
