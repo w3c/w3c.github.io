@@ -1,0 +1,108 @@
+{
+  "$id": "https://w3c.github.io/w3cjson-schema.json",
+  "$schema": "http://json-schema.org/schema#",
+  "description": "A representation of the W3C settings for the GitHub repository",
+  "type": "object",
+  "properties": {
+    "group": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/groupName"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/groupName"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      ]
+    },
+    "repo-type": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/repoTypes"
+        },
+        {
+          "type": [
+            "array"
+          ],
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/repoTypes"
+          },
+          "minItems": 1
+        }
+      ]
+    },
+    "shortname": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/shortnameType"
+        },
+        {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/shortnameType"
+          },
+          "minItems": 1
+        }
+      ],
+      "description": "An array of W3C shortnames/series, associating  this repository with /TR."
+    },
+    "contacts": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      ],
+      "description": "An array of people who are considered points of contact for the repository for administrative requests."
+    },
+    "policy": {
+      "enum": [
+        "open",
+        "restricted"
+      ],
+      "description": " If set to open, any W3C Team member should feel empowered to help with the management of this given repository."
+    }
+  },
+  "$defs": {
+    "groupName": {
+      "type": "string",
+      "pattern": "(wg|ig|cg|bg|tf|other)/[^/]+",
+      "description": "The prefixed shortname of a group, per https://api.w3.org/groups/{groupName}"
+    },
+    "repoTypes": {
+      "enum": [
+        "rec-track",
+        "note",
+        "registry",
+        "cg-report",
+        "tests",
+        "process",
+        "workshop",
+        "homepage",
+        "translation",
+        "article",
+        "tool",
+        "project",
+        "others"
+      ],
+      "description": "identify the type and purpose of a repository."
+    },
+    "shortnameType": {
+      "type": "string",
+      "pattern": "\\w+(-\\w+)*"
+    }
+  }
+}
