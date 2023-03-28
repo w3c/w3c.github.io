@@ -77,7 +77,7 @@
     },
     "exposed": {
       "type": "boolean",
-      "description": " If set to true, the repository will be exposed on https://www.w3.org/groups pages."
+      "description": " If set to true, the repository will be exposed on https://www.w3.org/groups/ pages."
     }
   },
   "$defs": {
