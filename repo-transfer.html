@@ -32,7 +32,7 @@
       <img src="img/github-transfer.png" title="GitHub repository transfer"/>
   </ol>
 
-  <p>Once the tansfer is done, the next steps vary depending on the nature of the repository (specifications development or tooling).</p>
+  <p>Once the transfer is done, the next steps vary depending on the nature of the repository (specifications development or tooling).</p>
   <ul>
     <li><strong>if the repository is about specifications development</strong>, it needs to be tracked by the <a href="https://labs.w3.org/repo-manager/">W3C repository manager</a> to help ensure that contributions are properly managed under W3C patent policies. To add a repository to the W3C repository manager, someone with admin rights on the repository needs to import it via the <a href="https://labs.w3.org/repo-manager/repo/import">"import" tool</a>. The repository manager will offer to add some files (<code>w3c.json</code>, <code>CONTRIBUTING.md</code>, <code>LICENSE.md</code>, etc) if they don't already exist and will add a webhook to the repository.<br>
       <strong>Be careful to select the right link to log in to the repository manager</strong>.<br>
@@ -40,7 +40,22 @@
       <img src="img/repo-manager-import.png" title="Repository manager import"/>
       <li><strong>if the repository is not about specifications development</strong>, you only need to add a file <a href="/w3c.json.html"><code>w3c.json</code></a> at the root of the repository
   </ul>
-  
+
+  <p>If the repository contained a specification published through GitHub Pages, also <b>consider adding redirects</b> because <a href="https://www.w3.org/Provider/Style/URI">Cool URIs don't change</a>! When you transfer a repository, GitHub automatically redirects GitHub repo links (<code>https://github.com/[org]/[repo]</code>) but it does not redirect GitHub Pages links (<code>https://[org].github.io/[repo]</code>). That breaks former links to the specification. There is no direct way to create a redirect for GitHub Pages but the following steps can be used to redirect <code>https://[org].github.io/[repo]/</code> to <code>https://w3c.github.io/[repo]/</code>:</p>
+  <ul>
+    <li>Create a <code>[org].github.io</code> repository under <code>[org]</code> if it does not exist already.</li>
+    <li>Create a <code>[repo]</code> folder in the <code>[org].github.io</code> repository.</li>
+    <li>Add an <code>index.html</code> file under the <code>[repo]</code> folder, which contains the following HTML code:
+      <br/>
+      <pre><code><code>&lt;!DOCTYPE html>
+&lt;script>
+  const currentHash = window.location.hash;
+  const newLocation = "https://w3c.github.io/<b>[repo]</b>/" + currentHash;
+  window.location = newLocation;
+&lt;/script></code></code>
+    </li>
+  </ul>
+  <p>See the <a href="https://github.com/WICG/wicg.github.io">wicg.github.io repository</a> for examples of redirects set in place when WICG repositories transition to the W3C organization.</p>
 </main>
     <footer>
       <address><a href="https://github.com/w3c/w3c.github.io/">We are on GitHub</a></address>
