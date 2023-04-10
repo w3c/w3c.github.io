@@ -3,6 +3,7 @@
 
 html {
     font-family: Titillium;
+    line-height: 1.5;
 }
 header {
     border-bottom: 1px solid silver;
@@ -17,7 +18,7 @@ section {
     padding: .5rem;
 }
 h1 {
-    color: #648ff1;
+    color: #005a9c;
     font-size: 50px;
     font-weight: 300;
     margin: 0;
@@ -34,18 +35,14 @@ main {
     margin-top: 50px;
 }
 a {
-    color: #648ff1;
+    color: #005a9c;
     text-decoration: underline #84df5d;
-}
-a:hover {
-    color: #84df5d;
-    text-decoration: underline #648ff1;
 }
 h2 {
     font-weight: 300;
     font-size: 30px;
     margin-bottom: 10px;
-    border-left: 15px solid #648ff1;
+    border-left: 15px solid #005a9c;
     padding-left: 5px;
     margin-left: -20px;
 }
@@ -61,7 +58,7 @@ dd {
     margin-bottom: 20px;
 }
 footer {
-    background: #648ff1;
+    background: #005a9c;
     color: white;
     margin-top: 100px;
 }
@@ -113,7 +110,7 @@ footer a, footer a:visited, footer a:focus, footer a:hover {
 
 @keyframes highlight {
     0%, 50% {
-        box-shadow: 0 0 4rem #648ff1;
+        box-shadow: 0 0 4rem #005a9c;
     }
     to {
         box-shadow: none;
