@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="css/wgio.css">
     <link rel="icon" type="image/x-icon" href="//labs.w3.org/favicon.ico">
     <style>
+      .darkBg { color: white; }
       dl.labels dt {
-        font-weight: bold;
-        line-height: 1.5em;
+        width: fit-content;
+        padding: 0 .5lh;
+        border-radius: .5lh;
       }
       dl.labels dd {
         margin-top: 1em;
       }
       dl.labels dt a {
-        padding: 0.7ex;
-        border-radius: 0.7ex;
         text-decoration: none;
         color: black;
       }
@@ -76,40 +76,26 @@
 <section id='testing'>
 <h3>Testing and Implementations</h3>
   <p>Those labels are meant to track testing and implementation status.</p>
-  <dl>
-    <dt>needs tests</dt>
-    <dd>More tests will be needed in this area to exit the Candidate Recommendation state.</dd>
-    <dt>needs implementation</dt>
-    <dd>More implementation experience is needed in this area.</dd>
-    <dt>test:missing-coverage</dt>
-    <dd>More tests will be needed in this area.</dd>
+  <dl class='labels'>
+    <dt data-label="needs tests"></dt>
+    <dt data-label="needs implementation"></dt>
+    <dt data-label="test:missing-coverage"></dt>
   </dl>
 </section>
 <section id='specifications'>
   <h3>Specifications</h3>
-  <dl>
-    <dt>editorial</dt>
-    <dd>The reported issue can be addressed with an editorial change. This tag could be combined with others (except <code>substantive</code>).</dd>
-    <dt>substantive</dt>
-    <dd>The reported issue will only be addressed with a substantive change.  This tag could be combined with others (except <code>editorial</code>).</dd>
-    <dt>bug</dt>
-    <dd>The specification is broken or misleading and need to change.</dd>
-    <dt>enhancement</dt>
-    <dd>The specification works as-is but could be improved.</dd>
-    <dt>help wanted</dt>
-    <dd>The editor and/or Group need to resolve this issue.</dd>
-    <dt>invalid</dt>
-    <dd>This issue or pull request was declared out of scope.</dd>
-    <dt>duplicate</dt>
-    <dd>This issue or pull request is a duplicate and will be closed if not already closed.</dd>
-    <dt>wontfix</dt>
-    <dd>This issue won't get addressed. Best is to combine this one with others, sich as <code>invalid</code>.</dd>
-    <dt>w3c</dt>
-    <dd>This is used to track non-technical W3C Process related issues, such as transitions.</dd>
-    <dt>Errata</dt>
-    <dd>Erratum for a W3C Recommendation (see <a href="https://github.com/w3c/display_errata">w3c/display_errata</a>)</dd>
-    <dt>ErratumRaised</dt>
-    <dd>Raised to become an Erratum later (see <a href="https://github.com/w3c/display_errata">w3c/display_errata</a>)</dd>
+  <dl class='labels'>
+    <dt data-label="editorial"></dt>
+    <dt data-label="substantive"></dt>
+    <dt data-label="bug"></dt>
+    <dt data-label="enhancement"></dt>
+    <dt data-label="help wanted"></dt>
+    <dt data-label="Closed Rejected as Invalid"></dt>
+    <dt data-label="Closed as Duplicate"></dt>
+    <dt data-label="Closed Rejected as Wontfix"></dt>
+    <dt data-label="w3c"></dt>
+    <dt data-label="Errata"></dt>
+    <dt data-label="ErratumRaised"></dt>
   </dl>
 </section>
 </section>
@@ -195,12 +181,50 @@
       </p>
     </footer>
 <script>
-// populate horizontal reviews
-fetch("hr-labels.json").then(res => res.json()).then(labels => {
-  // labels is an array of labels
+// Expects an RRGGBB hex color without the '#'.
+function isDark(rgbColor) {
+  const r = parseInt(rgbColor.slice(0,2), 16);
+  const g = parseInt(rgbColor.slice(2,4), 16);
+  const b = parseInt(rgbColor.slice(4,6), 16);
+  // The threshold value is where the contrast against white (luminance 1) is the same as the
+  // contrast against black (luminance 0): 1.05/(threshold+.05) == (threshold+.05)/.05.
+  return luminance(r,g,b) < 0.18;
+}
+// From https://www.w3.org/TR/WCAG21/#dfn-relative-luminance.
+function linearize(component) {
+  const fracComponent = component/255;
+  if (fracComponent < 0.04045) return fracComponent/12.92;
+  return Math.pow((fracComponent+0.055)/1.055, 2.4);
+}
+function luminance(r, g, b) {
+  return .2126*linearize(r) + .7152*linearize(g) + .0722*linearize(b);
+}
+
+// Populate label descriptions.
+(async function() {
+  /** @type {Array} */
+  const labels = await (await fetch("common-labels.json")).json();
+
+  // Populate simple labels.
+  for (const dt of document.querySelectorAll("[data-label]")) {
+    const label = labels.find(l=>l.name === dt.dataset.label);
+    if (!label) continue;
+    dt.id = dt.dataset.label.replace(' ', '-');
+    dt.style.backgroundColor = `#${label.color}`;
+    dt.classList.toggle('darkBg', isDark(label.color));
+    dt.textContent = label.name;
+    const dd = document.createElement('dd');
+    if (label.longdesc) {
+      dd.innerHTML = label.longdesc;
+    } else {
+      dd.textContent = label.description;
+    }
+    dt.insertAdjacentElement('afterend', dd);
+  }
+
+  // populate horizontal reviews
   const dts = document.querySelectorAll("#horizontal-reviews dl dt");
-  for (let index = 0; index < dts.length; index++) {
-    let dt = dts[index];
+  for (const dt of dts) {
     let className = dt.className;
     if (className) {
       let dd = dt.nextElementSibling;
@@ -208,8 +232,8 @@ fetch("hr-labels.json").then(res => res.json()).then(labels => {
       labels.forEach(label => {
         if (label.name.indexOf(className) === 0) {
           let sublabel = label.name.substring(className.length+1);
-          entries+= `<dt id='${label.name}'><a href='https://github.com/${label.repo}/issues/?q=label%3A${sublabel}'
-           style='background-color: #${label.color}'>${label.name}</a></dt>
+          entries+= `<dt id='${label.name}' style='background-color: #${label.color}'>
+            <a href='https://github.com/${label.repo}/issues/?q=label%3A${sublabel}'>${label.name}</a></dt>
            <dd><p>${label.longdesc}</p><p>Color: #${label.color}</p></dd>`;
         }
       })
@@ -218,7 +242,7 @@ fetch("hr-labels.json").then(res => res.json()).then(labels => {
       dd.appendChild(div);
     }
   }
-})
+})();
 </script>
   </body>
 </html>

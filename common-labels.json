@@ -98,5 +98,78 @@
     "symbol": "🗼",
     "repo": "w3ctag/tracking-issues",
     "excludeGroups": [ 34270 ]
+  },
+  {
+    "name": "needs tests",
+    "description": "More tests will be needed in this area to exit the Candidate Recommendation state.",
+    "color": "5319e7"
+  },
+  {
+    "name": "needs implementation",
+    "description": "More implementation experience is needed in this area.",
+    "color": "5319e7"
+  },
+  {
+    "name": "test:missing-coverage",
+    "description": "More tests will be needed in this area.",
+    "color": "5319e7"
+  },
+  {
+    "name": "editorial",
+    "longdesc": "The reported issue can be addressed with an editorial change. This tag could be combined with others (except <code>substantive</code>).",
+    "color": "f4f995"
+  },
+  {
+    "name": "substantive",
+    "longdesc": "The reported issue will only be addressed with a substantive change.  This tag could be combined with others (except <code>editorial</code>).",
+    "color": "f4f995"
+  },
+  {
+    "name": "bug",
+    "description": "The specification is broken or misleading and need to change.",
+    "color": "f4f995"
+  },
+  {
+    "name": "enhancement",
+    "description": "The specification works as-is but could be improved.",
+    "color": "f4f995"
+  },
+  {
+    "name": "help wanted",
+    "description": "The editor and/or Group need to resolve this issue.",
+    "color": "bcf99d"
+  },
+  {
+    "name": "Closed Rejected as Invalid",
+    "oldnames": ["invalid"],
+    "description": "This issue or pull request was declared out of scope.",
+    "color": "f9d0c4"
+  },
+  {
+    "name": "Closed as Duplicate",
+    "oldnames": ["duplicate"],
+    "description": "This issue or pull request is a duplicate and will be closed if not already closed.",
+    "color": "f9d0c4"
+  },
+  {
+    "name": "Closed Rejected as Wontfix",
+    "oldnames": ["wontfix"],
+    "description": "This issue won't get addressed. Best is to combine this one with others, such as <code>invalid</code>.",
+    "color": "f9d0c4"
+  },
+  {
+    "name": "w3c",
+    "description": "This is used to track non-technical W3C Process related issues, such as transitions.",
+    "color": "005a9c"
+  },
+  {
+    "name": "Errata",
+    "longdesc": "Erratum for a W3C Recommendation (see <a href=\"https://github.com/w3c/display_errata\">w3c/display_errata</a>)",
+    "color": "005a9c"
+  },
+  {
+    "name": "ErratumRaised",
+    "longdesc": "Raised to become an Erratum later (see <a href=\"https://github.com/w3c/display_errata\">w3c/display_errata</a>)",
+    "color": "005a9c"
   }
 ]
