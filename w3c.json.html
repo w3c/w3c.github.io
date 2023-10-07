@@ -40,14 +40,10 @@
   <dl>
     <dt id="group" data-type="number|array&lt;number>|string|array&lt;string>"><code>group</code></dt>
     <dd>
-      The "/"-seperated concatenation of group-type ("wg", "cg", "ig", "bg") and shortname (alternatively, the numeric ID) of the group in charge of this repo. If the repo is not linked to any group, do not include that field.
-      <br />
-      <br />
-      <strong>Note:</strong> If the group is actually a joint task
-      force of more than group, please specify all the shortnames of the
-      groups consist of the task force as an array, e.g.:
-      <br />
-      <pre>"group": ["wg/css", "wg/svg"]</pre>
+      The "/"-separated concatenation of group-type ("wg", "cg", "ig", "bg", "tf", "other") and shortname of the <a href="https://www.w3.org/groups/">group or task force</a>
+      in charge of this repository. If the repository is not linked to any group, do not include that field. If the repository is linked to multiple groups, use an array.
+
+      <pre>"group": ["wg/css", "other/tag", "tf/i18n-jlreq"]</pre>
     </dd>
 
     <dt id="contacts" data-type="array&lt;string>"><code>contacts</code></dt>
