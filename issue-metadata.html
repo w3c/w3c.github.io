@@ -209,7 +209,7 @@ function luminance(r, g, b) {
   for (const dt of document.querySelectorAll("[data-label]")) {
     const label = labels.find(l=>l.name === dt.dataset.label);
     if (!label) continue;
-    dt.id = dt.dataset.label.replace(' ', '-');
+    dt.id = dt.dataset.label.replaceAll(/\W+/g, '-').toLowerCase();
     dt.style.backgroundColor = `#${label.color}`;
     dt.classList.toggle('darkBg', isDark(label.color));
     dt.textContent = label.name;
