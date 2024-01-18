@@ -1,0 +1,175 @@
+[
+  {
+    "name": "i18n-tracker",
+    "groupname": "Internationalization",
+    "longdesc": "The Internationalization (i18n) Group may add this label to indicate that they are following a discussion. Other WGs can also add the label to any issue to automatically bring the discussion to the attention of the i18n Group. Issues with this label don't need to be resolved to the satisfaction of the i18n Group before a transition.",
+    "description": "Group bringing to attention of Internationalization, or tracked by i18n but not needing response.",
+    "color": "F9C9FF",
+    "symbol": "🌐",
+    "repo": "w3c/i18n-activity",
+    "excludeGroups": [  32113,  72665 ]
+  },
+  {
+    "name": "i18n-needs-resolution",
+    "groupname": "Internationalization",
+    "longdesc": "The Internationalization (i18n) Group has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by the i18n Group, and should only be removed by them. It may replace an i18n-tracker label.",
+    "description": "Issue the Internationalization Group has raised and looks for a response on.",
+    "color": "F9C9FF",
+    "symbol": "🌐",
+    "repo": "w3c/i18n-activity",
+    "excludeGroups": [  32113,  72665 ]
+  },
+  {
+    "name": "privacy-tracker",
+    "groupname": "PING",
+    "longdesc": "The Privacy Group (PING) may add this label to indicate that they are following a discussion. Other WGs can also add the label to any issue to automatically bring the discussion to the attention of the PING Group. Issues with this label don't need to be resolved to the satisfaction of the PING Group before a transition.",
+    "description": "Group bringing to attention of Privacy, or tracked by the Privacy Group but not needing response.",
+    "color": "d4af37",
+    "symbol": "👀",
+    "repo": "w3cping/tracking-issues",
+    "excludeGroups": [ 52497 ]
+  },
+  {
+    "name": "privacy-needs-resolution",
+    "groupname": "PING",
+    "longdesc": "The Privacy Group (PING) has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by the PING Group, and should only be removed by them. It may replace an privacy-tracker label.",
+    "description": "Issue the Privacy Group has raised and looks for a response on.",
+    "color": "d4af37",
+    "symbol": "👀",
+    "repo": "w3cping/tracking-issues",
+    "excludeGroups": [ 52497 ]
+  },
+  {
+    "name": "security-tracker",
+    "groupname": "Security",
+    "longdesc": "The security Group may add this label to indicate that they are following a discussion. Other WGs can also add the label to any issue to automatically bring the discussion to the attention of the PING Group. Issues with this label don't need to be resolved to the satisfaction of the PING Group before a transition.",
+    "description": "Group bringing to attention of security, or tracked by the security Group but not needing response.",
+    "color": "ffff00",
+    "symbol": "🔒",
+    "repo": "w3c/security-review",
+    "excludeGroups": [ 49309 ]
+  },
+  {
+    "name": "security-needs-resolution",
+    "groupname": "Security",
+    "longdesc": "The security Group has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by the PING Group, and should only be removed by them. It may replace an security-tracker label.",
+    "description": "Issue the security Group has raised and looks for a response on.",
+    "color": "ffff00",
+    "symbol": "🔒",
+    "repo": "w3c/security-review",
+    "excludeGroups": [ 49309 ]
+  },
+  {
+    "name": "a11y-tracker",
+    "groupname": "Accessibility",
+    "longdesc": "The Accessibility Group (APA) may add this label to indicate that they are following a discussion. Other WGs can also add the label to any issue to automatically bring the discussion to the attention of the APA Group. Issues with this label don't need to be resolved to the satisfaction of the APA Group before a transition.",
+    "description": "Group bringing to attention of a11y, or tracked by the a11y Group but not needing response.",
+    "color": "ea7472",
+    "symbol": "♿",
+    "repo": "w3c/a11y-review",
+    "excludeGroups": [ 83907 ]
+  },
+  {
+    "name": "a11y-needs-resolution",
+    "groupname": "Accessibility",
+    "longdesc": "The Accessibility Group (APA) has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by the APA Group, and should only be removed by them. It may replace an a11y-tracker label.",
+    "description": "Issue the Accessibility Group has raised and looks for a response on.",
+    "color": "ea7472",
+    "symbol": "♿",
+    "repo": "w3c/a11y-review",
+    "excludeGroups": [ 83907 ]
+  },
+  {
+    "name": "tag-tracker",
+    "groupname": "TAG",
+    "longdesc": "The Technical Architecture Group (TAG) may add this label to indicate that they are following a discussion. Other WGs can also add the label to any issue to automatically bring the discussion to the attention of the TAG. Issues with this label don't need to be resolved to the satisfaction of the TAG before a transition.",
+    "description": "Group bringing to attention of the TAG, or tracked by the TAG but not needing response.",
+    "color": "7fff00",
+    "symbol": "🗼",
+    "repo": "w3ctag/tracking-issues",
+    "excludeGroups": [ 34270 ]
+  },
+  {
+    "name": "tag-needs-resolution",
+    "groupname": "TAG",
+    "longdesc": "The Technical Architecture Group (TAG) has raised, or is following this issue, and expects it to be resolved to their satisfaction before a transition. This label is added/applied only by the TAG, and should only be removed by them. It may replace an tag-tracker label.",
+    "description": "Issue the Technical Architecture Group has raised and looks for a response on.",
+    "color": "7fff00",
+    "symbol": "🗼",
+    "repo": "w3ctag/tracking-issues",
+    "excludeGroups": [ 34270 ]
+  },
+  {
+    "name": "needs tests",
+    "description": "More tests will be needed in this area to exit the Candidate Recommendation state.",
+    "color": "5319e7"
+  },
+  {
+    "name": "needs implementation",
+    "description": "More implementation experience is needed in this area.",
+    "color": "5319e7"
+  },
+  {
+    "name": "test:missing-coverage",
+    "description": "More tests will be needed in this area.",
+    "color": "5319e7"
+  },
+  {
+    "name": "editorial",
+    "longdesc": "The reported issue can be addressed with an editorial change. This tag could be combined with others (except <code>substantive</code>).",
+    "color": "f4f995"
+  },
+  {
+    "name": "substantive",
+    "longdesc": "The reported issue will only be addressed with a substantive change.  This tag could be combined with others (except <code>editorial</code>).",
+    "color": "f4f995"
+  },
+  {
+    "name": "bug",
+    "description": "The specification is broken or misleading and need to change.",
+    "color": "f4f995"
+  },
+  {
+    "name": "enhancement",
+    "description": "The specification works as-is but could be improved.",
+    "color": "f4f995"
+  },
+  {
+    "name": "help wanted",
+    "description": "The editor and/or Group need to resolve this issue.",
+    "color": "bcf99d"
+  },
+  {
+    "name": "Closed Rejected as Invalid",
+    "oldnames": ["invalid"],
+    "description": "This issue or pull request was declared out of scope.",
+    "color": "f9d0c4"
+  },
+  {
+    "name": "Closed as Duplicate",
+    "oldnames": ["duplicate"],
+    "description": "This issue or pull request is a duplicate and will be closed if not already closed.",
+    "color": "f9d0c4"
+  },
+  {
+    "name": "Closed Rejected as Wontfix",
+    "oldnames": ["wontfix"],
+    "description": "This issue won't get addressed. Best is to combine this one with others, such as <code>invalid</code>.",
+    "color": "f9d0c4"
+  },
+  {
+    "name": "w3c",
+    "description": "This is used to track non-technical W3C Process related issues, such as transitions.",
+    "color": "005a9c"
+  },
+  {
+    "name": "Errata",
+    "longdesc": "Erratum for a W3C Recommendation (see <a href=\"https://github.com/w3c/display_errata\">w3c/display_errata</a>)",
+    "color": "005a9c"
+  },
+  {
+    "name": "ErratumRaised",
+    "longdesc": "Raised to become an Erratum later (see <a href=\"https://github.com/w3c/display_errata\">w3c/display_errata</a>)",
+    "color": "005a9c"
+  }
+]
