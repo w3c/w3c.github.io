@@ -23,7 +23,8 @@
     Projects operating under the <code>w3c</code> organisation (or related to W3C even if under
     other umbrellas) are encouraged to specify a <code>w3c.json</code> file at the root of their
     repository. The purpose of this file is to provide some metadata about repositories so that
-    they can be processed automatically by a variety of tools layered atop the organisation.
+    they can be processed automatically by a <a href='#tools'>variety of tools</a> layered atop
+    the organisation.
     They can also help humans figure out who to contact for a given problem.
   </p>
   <p>
@@ -123,6 +124,22 @@
       will not get exposed (<code>exposed:false</code>).
     </dd>
   </dl>
+  <h2 id="tools">Tooling</h2>
+
+  <p>
+    There is a variety of tools using the <code>w3c.json</code> files.
+  </p>
+  <h3>Groups</h3>
+
+  <p>
+    The tools pages of all of the W3C related groups, such as
+    <a href="https://www.w3.org/groups/cg/wicg/tools/">WICG</a> or
+    <a href="https://www.w3.org/groups/wg/vc/tools/">VC</a> are generated using the
+    <a href="https://w3c.github.io/groups/repositories.json">compiled set
+    of <code>w3c.json</code> files</a>. See also the <a
+    href="https://github.com/w3c/groups/blob/main/README.md">w3c/groups README</a>.
+  </p>
+
 </main>
     <footer>
       <address><a href="https://github.com/w3c/w3c.github.io/">We are on GitHub</a></address>
