@@ -7,6 +7,7 @@
     "color": "F9C9FF",
     "symbol": "🌐",
     "repo": "w3c/i18n-activity",
+    "repo-request": "w3c/i18n-request",
     "excludeGroups": [  32113,  72665 ]
   },
   {
@@ -17,6 +18,7 @@
     "color": "F9C9FF",
     "symbol": "🌐",
     "repo": "w3c/i18n-activity",
+    "repo-request": "w3c/i18n-request",
     "excludeGroups": [  32113,  72665 ]
   },
   {
@@ -27,6 +29,7 @@
     "color": "d4af37",
     "symbol": "👀",
     "repo": "w3cping/tracking-issues",
+    "repo-request": "w3cping/privacy-request",
     "excludeGroups": [ 52497 ]
   },
   {
@@ -37,6 +40,7 @@
     "color": "d4af37",
     "symbol": "👀",
     "repo": "w3cping/tracking-issues",
+    "repo-request": "w3cping/privacy-request",
     "excludeGroups": [ 52497 ]
   },
   {
@@ -47,6 +51,7 @@
     "color": "ffff00",
     "symbol": "🔒",
     "repo": "w3c/security-review",
+    "repo-request": "w3c/security-request",
     "excludeGroups": [ 49309 ]
   },
   {
@@ -57,6 +62,7 @@
     "color": "ffff00",
     "symbol": "🔒",
     "repo": "w3c/security-review",
+    "repo-request": "w3c/security-request",
     "excludeGroups": [ 49309 ]
   },
   {
@@ -67,6 +73,7 @@
     "color": "ea7472",
     "symbol": "♿",
     "repo": "w3c/a11y-review",
+    "repo-request": "w3c/a11y-request",
     "excludeGroups": [ 83907 ]
   },
   {
@@ -77,6 +84,7 @@
     "color": "ea7472",
     "symbol": "♿",
     "repo": "w3c/a11y-review",
+    "repo-request": "w3c/a11y-request",
     "excludeGroups": [ 83907 ]
   },
   {
@@ -87,6 +95,7 @@
     "color": "7fff00",
     "symbol": "🗼",
     "repo": "w3ctag/tracking-issues",
+    "repo-request": "w3ctag/design-reviews",
     "excludeGroups": [ 34270 ]
   },
   {
@@ -97,6 +106,7 @@
     "color": "7fff00",
     "symbol": "🗼",
     "repo": "w3ctag/tracking-issues",
+    "repo-request": "w3ctag/design-reviews",
     "excludeGroups": [ 34270 ]
   },
   {
