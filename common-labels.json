@@ -8,6 +8,7 @@
     "symbol": "🌐",
     "repo": "w3c/i18n-activity",
     "repo-request": "w3c/i18n-request",
+    "group": "wg/i18n-core",
     "excludeGroups": [  32113,  72665 ]
   },
   {
@@ -19,6 +20,7 @@
     "symbol": "🌐",
     "repo": "w3c/i18n-activity",
     "repo-request": "w3c/i18n-request",
+    "group": "wg/i18n-core",
     "excludeGroups": [  32113,  72665 ]
   },
   {
@@ -30,6 +32,7 @@
     "symbol": "👀",
     "repo": "w3cping/tracking-issues",
     "repo-request": "w3cping/privacy-request",
+    "group": "wg/privacy",
     "excludeGroups": [ 52497 ]
   },
   {
@@ -41,6 +44,7 @@
     "symbol": "👀",
     "repo": "w3cping/tracking-issues",
     "repo-request": "w3cping/privacy-request",
+    "group": "wg/privacy",
     "excludeGroups": [ 52497 ]
   },
   {
@@ -52,6 +56,7 @@
     "symbol": "🔒",
     "repo": "w3c/security-review",
     "repo-request": "w3c/security-request",
+    "group": "ig/security",
     "excludeGroups": [ 49309 ]
   },
   {
@@ -63,6 +68,7 @@
     "symbol": "🔒",
     "repo": "w3c/security-review",
     "repo-request": "w3c/security-request",
+    "group": "ig/security",
     "excludeGroups": [ 49309 ]
   },
   {
@@ -74,6 +80,7 @@
     "symbol": "♿",
     "repo": "w3c/a11y-review",
     "repo-request": "w3c/a11y-request",
+    "group": "wg/apa",
     "excludeGroups": [ 83907 ]
   },
   {
@@ -85,6 +92,7 @@
     "symbol": "♿",
     "repo": "w3c/a11y-review",
     "repo-request": "w3c/a11y-request",
+    "group": "wg/apa",
     "excludeGroups": [ 83907 ]
   },
   {
@@ -96,6 +104,7 @@
     "symbol": "🗼",
     "repo": "w3ctag/tracking-issues",
     "repo-request": "w3ctag/design-reviews",
+    "group": "other/tag",
     "excludeGroups": [ 34270 ]
   },
   {
@@ -107,6 +116,7 @@
     "symbol": "🗼",
     "repo": "w3ctag/tracking-issues",
     "repo-request": "w3ctag/design-reviews",
+    "group": "other/tag",
     "excludeGroups": [ 34270 ]
   },
   {
