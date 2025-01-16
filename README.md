@@ -1,7 +1,7 @@
 
 # The W3C organisation
 
-This is the repository for the documentation that sits at [https://w3c.github.io/](https://w3c.github.io).
+The W3C on GitHub documentation is now hosted at [https://www.w3.org/guide/github/](https://www.w3.org/guide/github/).
 
 ## Directories
 Directories (e.g., "DOM-Level-3-Events-key") are repositories that have been renamed. These serve as redirects.
