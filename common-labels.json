@@ -78,7 +78,7 @@
     "description": "Group bringing to attention of a11y, or tracked by the a11y Group but not needing response.",
     "color": "ea7472",
     "symbol": "♿",
-    "repo": "w3c/a11y-review",
+    "repo": "w3c/a11y-tracking",
     "repo-request": "w3c/a11y-request",
     "group": "wg/apa",
     "excludeGroups": [ 83907 ]
@@ -90,7 +90,7 @@
     "description": "Issue the Accessibility Group has raised and looks for a response on.",
     "color": "ea7472",
     "symbol": "♿",
-    "repo": "w3c/a11y-review",
+    "repo": "w3c/a11y-tracking",
     "repo-request": "w3c/a11y-request",
     "group": "wg/apa",
     "excludeGroups": [ 83907 ]
